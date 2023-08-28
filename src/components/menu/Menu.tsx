@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {Networks} from "../networks/Networks";
 
 
 export const Menu = () => {
@@ -12,12 +13,14 @@ export const Menu = () => {
                 <li>Projects</li>
                 <li>Contact</li>
             </ul>
+            <Networks/>
         </StyledMenu>
     );
 };
 
 const StyledMenu=styled.nav`
-  
+  display: flex;
+  gap: 50px;
 ul{
   list-style: none;
   display: flex;
