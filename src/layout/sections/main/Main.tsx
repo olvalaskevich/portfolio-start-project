@@ -1,7 +1,7 @@
 import React from 'react';
 import photo from '../../../accets/images/photo.jpg'
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper/FlexWrapper";
+import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 
 export const Main = () => {
     return (
