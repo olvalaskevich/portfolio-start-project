@@ -2,7 +2,8 @@ import React from 'react';
 import {Icon} from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 import styled from "styled-components";
-import {StyledParagraph, StyledTitle2} from "../../../components/titel2styled/Title2.styled";
+import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
+import {StyledText} from "../../../components/titel2styled/Text";
 
 
 type ProjectPropsType={
@@ -15,10 +16,12 @@ export const Project = (props:ProjectPropsType) => {
         <StyledCard>
             <img src={props.src} alt={'props.alt'}/>
             <StyledTitle2>Project Tile goes here</StyledTitle2>
-            <StyledParagraph>This is sample project description random things are here in description This is sample project lorem
+            <StyledText>This is sample project description random things are here in description This is sample project lorem
                 ipsum generator for dummy content
-            </StyledParagraph>
-            <StyledParagraph>Tech stack : HTML , JavaScript, SASS, React</StyledParagraph>
+            </StyledText>
+            <StyledText>
+                Tech stack : HTML , JavaScript, SASS, React
+            </StyledText>
             <FlexWrapper justify={'space-between'}>
                 <Icon iconId={'link'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
                 <a href={'#'}>Live Preview</a>

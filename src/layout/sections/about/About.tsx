@@ -3,7 +3,8 @@ import Drawing from '../../../accets/images/drawing.svg'
 import {Experience} from "../../../components/experience/Experience";
 import {ButtonExperience} from "../../../components/experience/Education";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
-import {StyledParagraph, StyledTitle2} from "../../../components/titel2styled/Title2.styled";
+import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
+import {StyledText} from "../../../components/titel2styled/Text";
 
 
 
@@ -13,11 +14,13 @@ export  const About = () => {
 <FlexWrapper justify={'space-between'} align={'flex-start'}>
 <FlexWrapper direction={'column'}>
     <StyledTitle2>About me</StyledTitle2>
-    <StyledParagraph>The Generator App is an online tool that helps you to export ready-made templates ready to work as your
+    <StyledText>The Generator App is an online tool that helps you to export ready-made templates ready to work as your
         future website. It helps you to combine slides, panels and other components and export it as a set of
         static files: HTML/CSS/JS.
-    </StyledParagraph>
-    <StyledTitle2>Work Experience</StyledTitle2>
+    </StyledText>
+    <StyledTitle2>
+        Work Experience
+    </StyledTitle2>
     <Experience text={'Junior Web Developer'} button={'Full time'} text1={'Dr. Rajkumar’s Learning App'}
                 text2={'Bengaluru'} text3={'Sep 2021 - Dec 2021'}/>
     <Experience text={'Web Development Intern'} button={'Internship'} text1={'IonPixelz Web Solutions'}
