@@ -12,6 +12,7 @@ import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 
 export const Projects = () => {
     return (
+        <section>
         <FlexWrapper justify={'space-around'} wrap={'wrap'}>
                 <Project src={Picture1} alt={'pic1'}/>
                 <Project src={Picture2} alt={'pic1'}/>
@@ -20,6 +21,7 @@ export const Projects = () => {
                 <Project src={Picture5} alt={'pic1'}/>
                 <Project src={Picture6} alt={'pic1'}/>
         </FlexWrapper>
+        </section>
     );
 };
 

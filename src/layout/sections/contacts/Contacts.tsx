@@ -7,20 +7,9 @@ import styled from "styled-components";
 
 export const Contacts = () => {
     return (
-        <>
-        <FlexWrapper direction={'column'} align={'center'}>
-            <StyledTitle2 size={'58px'} color={'#1E0E62'}>
-                For any questions please mail me:
-            </StyledTitle2>
-            <a href={'mailto:hi@pavanmg.in'}>hi@pavanmg.in</a>
-        </FlexWrapper>
-            <FlexWrapper justify={'space-between'} padding={'180px'}>
-                <Logo1/>
-                <span>+91 12345 09876</span>
-                <span>info@example.com</span>
-                <Networks/>
-            </FlexWrapper>
-        </>
+        <section>
+
+        </section>
 
 
 

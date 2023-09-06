@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 
 export const Stack = () => {
     return (
+        <section>
         <FlexWrapper direction={'column'}>
             <StyledSecondTitle>My Tech Stack</StyledSecondTitle>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
@@ -23,6 +24,7 @@ export const Stack = () => {
     <Icon iconId={'project1'} width={'88px'} height={'88px'} viewBox={'0 0 88 88'}/>
 </FlexWrapper>
         </FlexWrapper>
+        </section>
     );
 };
 

@@ -5,6 +5,7 @@ import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 
 export const Main = () => {
     return (
+        <section>
         <FlexWrapper justify={'space-between'} align={'center'}>
             <FlexWrapper>
                 Hi 👋,<br/>
@@ -15,6 +16,7 @@ export const Main = () => {
 
             <StyledPhoto src={photo} alt='Photo'/>
         </FlexWrapper>
+        </section>
     );
 };
 

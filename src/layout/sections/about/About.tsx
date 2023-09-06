@@ -11,6 +11,7 @@ import {StyledText} from "../../../components/titel2styled/Text";
 
 export  const About = () => {
     return (
+        <section>
 <FlexWrapper justify={'space-between'} align={'flex-start'}>
 <FlexWrapper direction={'column'}>
     <StyledTitle2>About me</StyledTitle2>
@@ -34,6 +35,7 @@ export  const About = () => {
     <img src={Drawing} alt={'Drawing'}/>
 
 </FlexWrapper>
+        </section>
     );
 };
 
