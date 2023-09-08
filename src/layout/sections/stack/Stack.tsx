@@ -2,10 +2,12 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
+import {Container} from "../../../components/container/Conteiner";
 
 export const Stack = () => {
     return (
         <section>
+            <Container>
         <FlexWrapper direction={'column'}>
             <StyledSecondTitle>My Tech Stack</StyledSecondTitle>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
@@ -24,6 +26,7 @@ export const Stack = () => {
     <Icon iconId={'project1'} width={'88px'} height={'88px'} viewBox={'0 0 88 88'}/>
 </FlexWrapper>
         </FlexWrapper>
+            </Container>
         </section>
     );
 };

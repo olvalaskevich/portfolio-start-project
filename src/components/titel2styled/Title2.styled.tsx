@@ -5,13 +5,19 @@ type StyledTextPropsType={
     size?:string;
     color?:string;
     align?:string;
+    weight?:string;
+    height?:string;
 }
 
 
 export const StyledTitle2=styled.h2<StyledTextPropsType>`
-  color: ${props => props.size || '42px'};
-  font-size: ${props => props.color || '#42446E'};
+  font-size: ${props => props.size || '42px'};
+  color: ${props => props.color || '#42446E'};
   text-align: ${props => props.align || 'left'};
+  font-weight: ${props => props.weight || '700'};
+  line-height: ${props => props.height || '52px'};
+  font-style: normal;
+  padding: 40px 0;
 `
 
 

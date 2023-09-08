@@ -7,12 +7,14 @@ import Picture5 from '../../../accets/images/picture5.webp'
 import Picture6 from '../../../accets/images/picture6.webp'
 import {Project} from "./Project";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
+import {Container} from "../../../components/container/Conteiner";
 
 
 
 export const Projects = () => {
     return (
         <section>
+            <Container>
         <FlexWrapper justify={'space-around'} wrap={'wrap'}>
                 <Project src={Picture1} alt={'pic1'}/>
                 <Project src={Picture2} alt={'pic1'}/>
@@ -21,6 +23,7 @@ export const Projects = () => {
                 <Project src={Picture5} alt={'pic1'}/>
                 <Project src={Picture6} alt={'pic1'}/>
         </FlexWrapper>
+            </Container>
         </section>
     );
 };
