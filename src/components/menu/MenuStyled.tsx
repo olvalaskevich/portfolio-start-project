@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 export const MenuStyled = () => {
     return (
@@ -17,10 +18,15 @@ export const MenuStyled = () => {
 
 const StyledMenu=styled.nav`
   display: flex;
-  gap: 50px;
+  
 ul{
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 55px;
+  font-family: 'DM Sans', sans-serif;
+  color: ${theme.colors.fontText};
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
 }
 `
