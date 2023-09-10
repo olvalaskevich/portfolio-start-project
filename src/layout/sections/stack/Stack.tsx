@@ -3,15 +3,17 @@ import styled from "styled-components";
 import {Icon} from "../../../components/icon/Icon";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 import {Container} from "../../../components/container/Conteiner";
+import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
+import {theme} from "../../../styles/Theme";
 
 export const Stack = () => {
     return (
-        <section>
+        <StyledStack>
             <Container>
         <FlexWrapper direction={'column'}>
-            <StyledSecondTitle>My Tech Stack</StyledSecondTitle>
+            <StyledTitle2 size={'48px'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
-<FlexWrapper justify={'space-around'} align={'center'} wrap={'wrap'} padding={'177px'}>
+<FlexWrapper gap={'100px'} align={'center'} wrap={'wrap'} padding={'124px 0 0 0'} justify={'center'}>
     <Icon iconId={'html'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
     <Icon iconId={'css'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
     <Icon iconId={'js'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
@@ -27,21 +29,22 @@ export const Stack = () => {
 </FlexWrapper>
         </FlexWrapper>
             </Container>
-        </section>
+        </StyledStack>
     );
 };
 
 
-const StyledSecondTitle=styled.h2`
-  color: #42446E;
-  font-size: 48px;
-  line-height: 26px;
-  text-align: center;
-`
 
-const StyledThirdTitle=styled.h3`
-  color: #666;
+
+export const StyledThirdTitle=styled.h3`
+  color: ${theme.colors.fontText};
   font-size: 32px;
+  font-weight: 400;
   line-height: 26px;
   text-align: center;
+  padding-top: 10px;
+`
+const StyledStack=styled.section`
+  margin-top: calc(200px - 40px);
+  
 `

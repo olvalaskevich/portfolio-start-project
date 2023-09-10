@@ -1,5 +1,5 @@
 import React from 'react';
-import Drawing from '../../../accets/images/drawing.svg'
+import Drawing from '../../../accets/images/drawing1.svg'
 import {Experience} from "../../../components/experience/Experience";
 import {ButtonExperience} from "../../../components/experience/Education";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
@@ -42,7 +42,7 @@ export  const About = () => {
                 </FlexWrapper>
 
             </Container>
-    <img src={Drawing} alt={'Drawing'}/>
+    <StyledDrawing src={Drawing} alt={'Drawing'}/>
 
 
         </StyledAbout>
@@ -53,4 +53,10 @@ export  const About = () => {
 const StyledAbout=styled.section`
   margin-top: calc(200px - 40px);
  
+`
+
+const StyledDrawing=styled.img`
+position: absolute;
+  right: 0px;
+  top: 727px
 `

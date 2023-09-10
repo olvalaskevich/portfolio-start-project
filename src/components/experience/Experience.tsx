@@ -44,7 +44,7 @@ export const Experience = (props:ExperiencePropsType) => {
 
 };
 
-const StyledGrid=styled.div`
+export const StyledGrid=styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(270px, auto));
   grid-template-rows: auto;
