@@ -33,6 +33,7 @@ const StyledPhoto=styled.img`
   width: calc(100% - 9px);
   height: calc(100% - 9px);
   border-radius: 50%;
+  object-fit: cover;
 `
 
 const  StyledBorder=styled.div`
