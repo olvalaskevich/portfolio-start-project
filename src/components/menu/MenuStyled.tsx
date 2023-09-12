@@ -12,11 +12,11 @@ export const MenuStyled = (props:MenuPropsType) => {
     return (
         <StyledMenuFooter>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Tech Stack</li>
-                <li>Projects</li>
-                <li>Contact</li>
+                <li><a href={'#'}>Home</a></li>
+                <li><a href={'#'}>About</a></li>
+                <li><a href={'#'}>Tech Stack</a></li>
+                <li><a href={'#'}>Projects</a></li>
+                <li><a href={'#'}>Contact</a></li>
             </ul>
         </StyledMenuFooter>
     )
@@ -25,11 +25,11 @@ export const MenuStyled = (props:MenuPropsType) => {
         return (
             <StyledMenu>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Tech Stack</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><a href={'#'}>Home</a></li>
+                    <li><a href={'#'}>About</a></li>
+                    <li><a href={'#'}>Tech Stack</a></li>
+                    <li><a href={'#'}>Projects</a></li>
+                    <li><a href={'#'}>Contact</a></li>
                 </ul>
             </StyledMenu>
         )
@@ -43,16 +43,28 @@ ul{
   list-style: none;
   display: flex;
   gap: 55px;
-  font-family: 'DM Sans', sans-serif;
-  color: ${theme.colors.fontText};
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 26px;
+  
 }
+  a{
+    color: ${theme.colors.fontText};
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  a:hover{
+    color: ${theme.colors.fontLinkProject};
+    font-weight: 700;
+    
+  }
 `
 
 const StyledMenuFooter=styled(StyledMenu)`
-ul{
-  color: ${theme.colors.fontTitle};
-}
+  a {
+    color: ${theme.colors.fontTitle};
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+  }
+  
 `
