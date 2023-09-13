@@ -58,7 +58,7 @@ ul{
     
   }
   
-  @media ${theme.media.tablet}{
+  @media ${theme.media.mobile}{
     display: none;
   }
   

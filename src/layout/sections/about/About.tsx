@@ -52,7 +52,10 @@ export  const About = () => {
 
 const StyledAbout=styled.section`
   margin-top: calc(200px - 40px);
- 
+  @media ${theme.media.mobile}{
+    display: none;
+
+  }
 `
 
 const StyledDrawing=styled.img`
