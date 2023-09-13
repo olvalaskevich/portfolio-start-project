@@ -5,7 +5,7 @@ import {Logo1} from "../../components/logo/Logo1";
 import {Container} from "../../components/container/Conteiner";
 import {FlexWrapper} from "../../components/flexwrapper/FlexWrapper";
 import {MenuMobile} from "../../components/mobile/MenuMobile";
-import {theme} from "../../styles/Theme";
+
 
 
 export const Header = () => {

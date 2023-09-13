@@ -34,6 +34,7 @@ const StyledPhoto=styled.img`
   height: calc(100% - 9px);
   border-radius: 50%;
   object-fit: cover;
+  aspect-ratio: auto;
 `
 
 const  StyledBorder=styled.div`

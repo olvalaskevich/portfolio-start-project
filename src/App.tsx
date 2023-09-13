@@ -10,6 +10,7 @@ import {Footer} from "./layout/footer/Footer";
 
 
 
+
 function App() {
     return (
         <div>
@@ -23,6 +24,8 @@ function App() {
         </div>
     );
 }
+
+
 
 export default App;
 
