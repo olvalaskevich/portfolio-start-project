@@ -11,7 +11,7 @@ export const Stack = () => {
         <StyledStack>
             <Container>
         <FlexWrapper direction={'column'}>
-            <StyledTitle2 size={'48px'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
+            <StyledTitle2 size={'calc((100vw - 360px)/(1300 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
 <FlexWrapper gap={'100px'} align={'center'} wrap={'wrap'} padding={'124px 0 0 0'} justify={'center'}>
     <Icon iconId={'html'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
@@ -38,7 +38,7 @@ export const Stack = () => {
 
 export const StyledThirdTitle=styled.h3`
   color: ${theme.colors.fontText};
-  font-size: 32px;
+  font-size: calc((100vw - 360px)/(1300 - 360) * (32 - 20) + 20px);
   font-weight: 400;
   line-height: 26px;
   text-align: center;
@@ -46,5 +46,7 @@ export const StyledThirdTitle=styled.h3`
 `
 const StyledStack=styled.section`
   margin-top: calc(200px - 40px);
-  
+  @media ${theme.media.mobile}{
+    margin-top: 0;
+  }
 `
