@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type NetworksPropsType={
     footer?:boolean;
@@ -37,4 +38,8 @@ display: flex;
   column-gap: 20px;
   justify-self: right;
   align-self: center;
+
+  @media ${theme.media.tablet}{
+    display: none;
+  }
 `

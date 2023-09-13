@@ -57,6 +57,11 @@ ul{
     font-weight: 700;
     
   }
+  
+  @media ${theme.media.tablet}{
+    display: none;
+  }
+  
 `
 
 const StyledMenuFooter=styled(StyledMenu)`
