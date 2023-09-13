@@ -4,6 +4,8 @@ import styled from "styled-components";
 import {Logo1} from "../../components/logo/Logo1";
 import {Container} from "../../components/container/Conteiner";
 import {FlexWrapper} from "../../components/flexwrapper/FlexWrapper";
+import {MenuMobile} from "../../components/mobile/MenuMobile";
+import {theme} from "../../styles/Theme";
 
 
 export const Header = () => {
@@ -12,9 +14,8 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Logo1/>
-                    <FlexWrapper gap={'55px'} align={'flex-start'} padding={'5px 0px 0px 0px'}>
-                        <Menu/>
-                    </FlexWrapper>
+                    <Menu/>
+                    <MenuMobile/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -23,5 +24,8 @@ export const Header = () => {
 
 const StyledHeader=styled.header`
 margin-top: 40px;
+  
+  
+  
 `
 
