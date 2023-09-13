@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 import styled, {css} from "styled-components";
 import Burger from '../../accets/images/burger.svg'
 import {theme} from "../../styles/Theme";
@@ -33,8 +31,7 @@ display: none;
   display: flex;
     justify-content: center;
     align-items: center;
-    //position: fixed;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -72,11 +69,13 @@ const BurgerButton=styled.button<{isOpen:boolean}>`
   background-image: url(${Burger});
   border: none;
   background-color: transparent;
+  position: fixed;
+  right: 15px;
  
   ${props => props.isOpen && css<{isOpen:boolean}>`
   background-image: url(${Close});
-    z-index: 99999
-  ;
+    z-index: 99999;
+    
 `}
   
 `
