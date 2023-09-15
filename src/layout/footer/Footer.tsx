@@ -6,21 +6,16 @@ import {Container} from "../../components/container/Conteiner";
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 import {StyledText} from "../../components/titel2styled/Text";
-import {StyledGrid} from "../../components/experience/Experience";
+
+
+
 
 export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-        <StyledGridFooter>
-        <Logo1 footer/>
-        <StyledFooterLink>+91 12345 09876</StyledFooterLink>
-        <StyledFooterLink>info@example.com</StyledFooterLink>
-        <Networks footer/>
-        <StyledLine/>
-
-
-
+            <StyledLine/>
+        <StyledFlexFooter>
                     <MenuStyled footer/>
             <StyledTextGridFooter>Designed and built by
                 <StyledTextGradient> Pavan MG </StyledTextGradient>
@@ -29,20 +24,43 @@ export const Footer = () => {
                 &
                 <StyledTextGradient> Coffee</StyledTextGradient>
             </StyledTextGridFooter>
-        </StyledGridFooter>
+        </StyledFlexFooter>
+
 
             </Container>
+
         </StyledFooter>
     );
 };
 
 
+const StyledFooter=styled.section`
+  
+  padding-bottom: 60px;
+  
+  
+
+  @media ${theme.media.tablet}{
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+`
+const StyledFlexFooter=styled.div`
+  display: flex;
+  justify-content: space-between;
+  
+  @media ${theme.media.tablet}{
+    justify-content: flex-end;
+  }
+  
+`
+
 
 const StyledTextGridFooter=styled(StyledText)`
   grid-area: 3/2/4/5;
   justify-self: right;
+  
 `
-
 
 const StyledLine=styled.hr`
   max-width: 1190px;
@@ -55,27 +73,19 @@ const StyledLine=styled.hr`
 `
 
 
-const StyledGridFooter=styled(StyledGrid)`
-  grid-template-columns: repeat(4, auto);
-  grid-auto-rows: auto;
-  justify-items: start;
-`
-
-const StyledFooter=styled.section`
-  padding-top: 200px;
-  padding-bottom: 60px;
-  
-`
-
-const StyledFooterLink=styled.a`
+export const StyledFooterLink=styled.a`
   font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
   color: ${theme.colors.fontTitle};
+  flex-grow:0.5;
+  align-self: center;
 `
-const StyledTextGradient=styled(StyledText)`
+
+export const StyledTextGradient=styled(StyledText)`
   background-image: linear-gradient(to right, ${theme.colors.gradientEnd}, ${theme.colors.gradientMain});
   color: transparent;
   -webkit-background-clip: text;
 `
+
