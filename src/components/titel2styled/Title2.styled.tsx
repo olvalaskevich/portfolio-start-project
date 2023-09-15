@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 type StyledTextPropsType={
@@ -20,6 +21,15 @@ export const StyledTitle2=styled.h2<StyledTextPropsType>`
   font-family: ${props => props.family};
   font-style: normal;
   padding: 40px 0;
+
+  @media ${theme.media.tablet}{
+    padding: 0 0 40px;
+    text-align: center;
+  }
+
+  @media ${theme.media.desktopBig}{
+    font-size: 48px;
+  }
 `
 
 

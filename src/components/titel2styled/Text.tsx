@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 type StyledTextPropsType={
     size?:string;
     color?:string;
@@ -15,4 +16,6 @@ export const StyledText=styled.span<StyledTextPropsType>`
   font-weight:${props => props.weight || '400'};
   line-height:${props => props.height || '26px'};
   font-style: normal;
+
+  
   `
