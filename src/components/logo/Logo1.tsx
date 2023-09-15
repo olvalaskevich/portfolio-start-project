@@ -1,6 +1,6 @@
 import React from 'react';
 import logo1 from '../../accets/images/logo1.svg'
-import {Icon} from "../icon/Icon";
+import logo2 from '../../accets/images/logo2.svg'
 
 
 type LogoPropsType={
@@ -12,7 +12,7 @@ type LogoPropsType={
 export const Logo1 = (props:LogoPropsType) => {
     if (props.footer===true){
         return (
-            <Icon iconId={'logoFooter'} width={'97'} height={'59'} viewBox={'0 0 97 59'}/>
+            <img src={logo2} alt={"logotype"}/>
         )
     }
     else
