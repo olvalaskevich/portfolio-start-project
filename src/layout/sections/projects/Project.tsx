@@ -17,10 +17,10 @@ export const Project = (props:ProjectPropsType) => {
         <StyledCard>
             <img src={props.src} alt={'props.alt'}/>
             <FlexWrapper direction={'column'} gap={'15px'} padding={'25px'}>
-                <StyledText size={'calc((100vw - 360px)/(1300 - 360) * (28 - 22) + 22px)'} weight={'500'} height={'26px'} color={`${theme.colors.fontLinkProject}`}>
+                <StyledText size={'calc((100vw - 360px)/(1920 - 360) * (28 - 22) + 22px)'} weight={'500'} height={'26px'} color={`${theme.colors.fontLinkProject}`}>
                     Project Tile goes here
                 </StyledText>
-                <StyledText weight={'300'} size={'calc((100vw - 360px)/(1300 - 360) * (18 - 14) + 14px)'} height={'26px'} color={`${theme.colors.fontText}`}>This is
+                <StyledText weight={'300'} size={'calc((100vw - 360px)/(1920 - 360) * (18 - 14) + 14px)'} height={'26px'} color={`${theme.colors.fontText}`}>This is
                     sample project description random things are here in description This is sample project lorem
                     ipsum generator for dummy content
                 </StyledText>
@@ -59,7 +59,8 @@ const StyledGridLinks=styled.div`
 
 
 const StyledCard=styled.div`
-  width: 375px;
+  max-width: 375px;
+  width: 100%;
   height: 570px;
   background-color: ${theme.colors.primaryBg};
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
