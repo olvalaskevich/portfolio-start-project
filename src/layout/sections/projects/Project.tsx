@@ -17,10 +17,10 @@ export const Project = (props:ProjectPropsType) => {
         <StyledCard>
             <img src={props.src} alt={'props.alt'}/>
             <FlexWrapper direction={'column'} gap={'15px'} padding={'25px'}>
-                <StyledText size={'calc((100vw - 360px)/(1920 - 360) * (28 - 22) + 22px)'} weight={'500'} height={'26px'} color={`${theme.colors.fontLinkProject}`}>
+                <StyledText size={'28px'} weight={'500'} height={'26px'} color={`${theme.colors.fontLinkProject}`}>
                     Project Tile goes here
                 </StyledText>
-                <StyledText weight={'300'} size={'calc((100vw - 360px)/(1920 - 360) * (18 - 14) + 14px)'} height={'26px'} color={`${theme.colors.fontText}`}>This is
+                <StyledText weight={'300'} size={'18px'} height={'26px'} >This is
                     sample project description random things are here in description This is sample project lorem
                     ipsum generator for dummy content
                 </StyledText>
@@ -61,14 +61,18 @@ const StyledGridLinks=styled.div`
 const StyledCard=styled.div`
   max-width: 375px;
   width: 100%;
-  height: 570px;
+  height: auto;
   background-color: ${theme.colors.primaryBg};
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
   border-radius: 20px;
+  
+  
   img{
     width: 100%;
     height: 260px;
     border-radius: 20px 20px 0 0;
+
+   
   }
   
   a{
@@ -78,4 +82,9 @@ const StyledCard=styled.div`
     font-weight: 400;
     line-height: 26px;
   }
+
+ 
 `
+
+// calc((100vw - 360px)/(1600 - 360) * (28 - 22) + 22px)
+// calc((100vw - 360px)/(1600 - 360) * (18 - 14) + 14px)

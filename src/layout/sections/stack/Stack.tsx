@@ -11,9 +11,9 @@ export const Stack = () => {
         <StyledStack>
             <Container>
         <FlexWrapper direction={'column'}>
-            <StyledTitle2 size={'calc((100vw - 360px)/(1300 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
+            <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
-<FlexWrapper gap={'100px'} align={'center'} wrap={'wrap'} padding={'124px 0 0 0'} justify={'center'}>
+            <StyledGridStack>
     <Icon iconId={'html'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
     <Icon iconId={'css'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
     <Icon iconId={'js'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
@@ -26,23 +26,41 @@ export const Stack = () => {
     <Icon iconId={'greensock'} width={'120px'} height={'120px'} viewBox={'0 0 120 120'}/>
     <Icon iconId={'vscode'} width={'112px'} height={'112px'} viewBox={'0 0 112 112'}/>
     <Icon iconId={'project1'} width={'88px'} height={'88px'} viewBox={'0 0 88 88'}/>
-</FlexWrapper>
+            </StyledGridStack>
         </FlexWrapper>
             </Container>
         </StyledStack>
     );
 };
 
-
-
+const StyledGridStack=styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 105px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 124px;
+  
+  @media ${theme.media.tablet}{
+    padding-top: 60px;
+  }
+  @media ${theme.media.mobile}{
+    gap: 50px;
+  }
+`
 
 export const StyledThirdTitle=styled.h3`
   color: ${theme.colors.fontText};
-  font-size: calc((100vw - 360px)/(1300 - 360) * (32 - 20) + 20px);
+  font-size: calc((100vw - 360px)/(1600 - 360) * (32 - 20) + 20px);
   font-weight: 400;
   line-height: 26px;
   text-align: center;
   padding-top: 10px;
+
+  @media ${theme.media.desktopBig}{
+    font-size: 32px;
+  }
 `
 const StyledStack=styled.section`
   margin-top: calc(200px - 40px);

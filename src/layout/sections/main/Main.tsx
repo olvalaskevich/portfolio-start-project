@@ -90,7 +90,7 @@ const StyledTextBlock=styled.div`
   height: 300px;
   color: ${theme.colors.fontTitle};
   font-family: 'Poppins', sans-serif;
-  font-size: calc((100vw - 360px)/(1300 - 360) * (58 - 30) + 30px);
+  font-size: calc((100vw - 360px)/(1600 - 360) * (58 - 30) + 30px);
   font-style: normal;
   font-weight: 700;
   line-height: 70px;
@@ -101,6 +101,10 @@ const StyledTextBlock=styled.div`
 
   @media ${theme.media.mobile}{
     text-align: center;
+  }
+
+  @media ${theme.media.desktopBig}{
+    font-size: 58px;
   }
 `
 

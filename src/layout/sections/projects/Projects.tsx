@@ -22,11 +22,11 @@ export const Projects = () => {
                 <StyledThirdTitle>Things I’ve built so far</StyledThirdTitle>
         <StyledCards>
                 <Project src={Picture1} alt={'pic1'}/>
-                <Project src={Picture2} alt={'pic1'}/>
-                <Project src={Picture3} alt={'pic1'}/>
-                <Project src={Picture4} alt={'pic1'}/>
-                <Project src={Picture5} alt={'pic1'}/>
-                <Project src={Picture6} alt={'pic1'}/>
+                <Project src={Picture2} alt={'pic2'}/>
+                <Project src={Picture3} alt={'pic3'}/>
+                <Project src={Picture4} alt={'pic4'}/>
+                <Project src={Picture5} alt={'pic5'}/>
+                <Project src={Picture6} alt={'pic6'}/>
         </StyledCards>
             </Container>
         </StyledProjects>
