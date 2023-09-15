@@ -46,6 +46,9 @@ const StyledCards=styled.div`
   padding-top: 110px;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media ${theme.media.tablet}{
+    padding-top: 60px;
 `
 
 
