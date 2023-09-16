@@ -73,13 +73,17 @@ const LogoAdaptive=styled.div`
 
 const StyledLink=styled.a`
   font-family: 'DM Sans', sans-serif;
-  font-size: calc((100vw - 360px)/(1920 - 360) * (58 - 30) + 30px);
+  font-size: calc((100vw - 360px)/(1600 - 360) * (58 - 30) + 30px);
   font-weight: 700;
   line-height: 70px; 
   letter-spacing: -1px;
   background-image: linear-gradient(to right, ${theme.colors.gradientEnd}, ${theme.colors.gradientMain});
   color: transparent;
   -webkit-background-clip: text;
+
+  @media ${theme.media.desktopBig}{
+    font-size: 58px;
+  }
 `
 
 
