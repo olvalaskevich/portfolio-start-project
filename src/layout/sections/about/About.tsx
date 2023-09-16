@@ -18,10 +18,10 @@ export  const About = () => {
             <Container>
 
                 <FlexWrapper direction={'column'} width={'700px'}>
-                    <StyledTitle2 color={`${theme.colors.fontTitle}`} size={`42px`}>
+                    <StyledTextAbout>
                         About me
-                    </StyledTitle2>
-                    <StyledText>The Generator App is an online tool that helps you to export ready-made templates ready
+                    </StyledTextAbout>
+                    <StyledText size={'18px'}>The Generator App is an online tool that helps you to export ready-made templates ready
                         to work as your
                         future website. It helps you to combine slides, panels and other components and export it as a
                         set of
@@ -57,9 +57,16 @@ const StyledAbout=styled.section`
 
   }
 `
+const StyledTextAbout=styled.h2`
+  color: ${theme.colors.fontTitle};
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+`
+
 
 const StyledDrawing=styled.img`
 position: absolute;
-  right: 0px;
+  right: 0;
   top: 727px
 `
