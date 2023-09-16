@@ -58,9 +58,11 @@ ul{
     
   }
   
-  @media ${theme.media.mobile}{
+  @media ${theme.media.tablet}{
     display: none;
   }
+
+ 
   
 `
 
