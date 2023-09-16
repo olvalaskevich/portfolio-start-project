@@ -1,7 +1,5 @@
 import React from 'react';
 import {MenuStyled} from "../../components/menu/MenuStyled";
-import {Logo1} from "../../components/logo/Logo1";
-import {Networks} from "../../components/networks/Networks";
 import {Container} from "../../components/container/Conteiner";
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
@@ -44,21 +42,33 @@ const StyledFooter=styled.section`
     padding-top: 0;
     padding-bottom: 20px;
   }
+  
+
 `
 const StyledFlexFooter=styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  
   
   @media ${theme.media.tablet}{
-    justify-content: flex-end;
+    justify-content: center;
+  }
+
+  @media ${theme.media.desktop} {
+  flex-direction:column;
+    align-items: center;
   }
   
 `
 
 
 const StyledTextGridFooter=styled(StyledText)`
-  grid-area: 3/2/4/5;
-  justify-self: right;
+  text-align: center;
+  @media ${theme.media.desktop}{
+    padding-top: 50px;
+    
+  }
   
 `
 
