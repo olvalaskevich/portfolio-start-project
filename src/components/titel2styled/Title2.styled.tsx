@@ -9,6 +9,7 @@ type StyledTextPropsType={
     weight?:string;
     height?:string;
     family?:string;
+    padding?:string;
 }
 
 
@@ -20,7 +21,8 @@ export const StyledTitle2=styled.h2<StyledTextPropsType>`
   line-height: ${props => props.height || '52px'};
   font-family: ${props => props.family};
   font-style: normal;
-  padding: 40px 0;
+  padding: ${props => props.padding || '38px 0'};
+  letter-spacing: -1px;
 
   @media ${theme.media.tablet}{
     padding: 0 0 40px;
