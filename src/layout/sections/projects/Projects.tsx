@@ -18,7 +18,7 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <StyledTitle2 size={'calc((100vw - 360px)/(1300 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
+                <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
                 <StyledThirdTitle>Things I’ve built so far</StyledThirdTitle>
         <StyledCards>
                 <Project src={Picture1} alt={'pic1'}/>
@@ -34,7 +34,7 @@ export const Projects = () => {
 };
 
 const StyledProjects=styled.section`
-  margin-top: calc(200px - 40px);
+  margin-top: calc(200px - 35px);
   @media ${theme.media.mobile}{
     margin-top: 90px;
   }
