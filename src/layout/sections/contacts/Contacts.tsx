@@ -12,9 +12,9 @@ import {StyledFooterLink} from "../../footer/Footer";
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <Container>
+            <Container padding={'0 15px'}>
             <FlexWrapper direction={'column'} align={'center'}>
-                <StyledTitle2 size={'calc((100vw - 360px)/(1920 - 360) * (58 - 30) + 30px)'} color={`${theme.colors.fontTitleContact}`} family={'DM Sans'} height={'70px'}>
+                <StyledTitle2 padding={'38px 0 10px'} size={'calc((100vw - 360px)/(1600 - 360) * (58 - 30) + 30px)'} color={`${theme.colors.fontTitleContact}`} family={'DM Sans'} height={'70px'}>
                     For any questions please mail me:
                 </StyledTitle2>
                 <StyledLink href={'mailto:hi@pavanmg.in'}>hi@pavanmg.in</StyledLink>
@@ -38,7 +38,8 @@ export const Contacts = () => {
 };
 
 const StyledContacts=styled.section`
-  padding-top: calc(185px - 40px);
+  padding-top: calc(185px - 30px);
+  
 
   @media ${theme.media.tablet}{
     padding-top: 60px;
@@ -52,7 +53,7 @@ const StyledContactsAdaptive=styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-top: 180px;
+  padding-top: 215px;
    
   
   @media ${theme.media.tablet}{

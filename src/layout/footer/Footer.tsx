@@ -11,7 +11,7 @@ import {StyledText} from "../../components/titel2styled/Text";
 export const Footer = () => {
     return (
         <StyledFooter>
-            <Container>
+            <Container padding={'0 15px'}>
             <StyledLine/>
         <StyledFlexFooter>
                     <MenuStyled footer/>
@@ -65,6 +65,10 @@ const StyledFlexFooter=styled.div`
 
 const StyledTextGridFooter=styled(StyledText)`
   text-align: center;
+  color: ${theme.colors.fontText};
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
   @media ${theme.media.desktop}{
     padding-top: 50px;
     
@@ -89,8 +93,9 @@ export const StyledFooterLink=styled.a`
   font-weight: 400;
   line-height: 26px;
   color: ${theme.colors.fontTitle};
-  flex-grow:0.5;
+  flex-grow:0.2;
   align-self: center;
+  
 `
 
 export const StyledTextGradient=styled(StyledText)`
