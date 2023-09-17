@@ -9,7 +9,7 @@ import {theme} from "../../../styles/Theme";
 export const Stack = () => {
     return (
         <StyledStack>
-            <Container>
+            <Container padding={'0 15px'}>
         <FlexWrapper direction={'column'}>
             <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
             <StyledThirdTitle>Technologies I’ve been working with recently</StyledThirdTitle>
@@ -36,7 +36,7 @@ export const Stack = () => {
 const StyledGridStack=styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 105px;
+  gap: 80px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -63,7 +63,7 @@ export const StyledThirdTitle=styled.h3`
   }
 `
 const StyledStack=styled.section`
-  margin-top: calc(200px - 40px);
+  margin-top: calc(200px - 65px);
   @media ${theme.media.mobile}{
     margin-top: 0;
   }
