@@ -15,11 +15,11 @@ import {theme} from "../../../styles/Theme";
 export  const About = () => {
     return (
         <StyledAbout>
-            <Container>
+            <Container padding={'0 15px'}>
 
-                <FlexWrapper direction={'column'} width={'700px'}>
+                <AboutWrapper>
                     <StyledTextAbout>
-                        About me
+                        About Me
                     </StyledTextAbout>
                     <StyledText size={'18px'}>The Generator App is an online tool that helps you to export ready-made templates ready
                         to work as your
@@ -27,19 +27,19 @@ export  const About = () => {
                         set of
                         static files: HTML/CSS/JS.
                     </StyledText>
-                    <StyledTitle2>
+                    <StyledTextExperience>
                         Work Experience
-                    </StyledTitle2>
-                    <Experience text={'Junior Web Developer'} button={'Full time'} text1={'Dr. Rajkumar’s Learning App'}
+                    </StyledTextExperience>
+                    <Experience text={'Junior Web Developer'} button={'Full Time'} text1={'Dr. Rajkumar’s Learning App'}
                                 text2={'Bengaluru'} text3={'Sep 2021 - Dec 2021'}/>
                     <Experience text={'Web Development Intern'} button={'Internship'} text1={'IonPixelz Web Solutions'}
                                 text2={'Bengaluru'} text3={'Sep 2021 - Dec 2021'}/>
                     <Experience text={'SEO / SEM Specialist'} button={'Internship'} text1={'HAAPS'}
                                 text2={'Bengaluru'} text3={'Sep 2021 - Dec 2021'}/>
-                    <StyledTitle2>Education</StyledTitle2>
-                    <ButtonExperience text={'Bachelor in Electronics & Communication'} button={'Full time'}
+                    <StyledTextEducation>Education</StyledTextEducation>
+                    <ButtonExperience text={'Bachelor in Electronics & Communication'} button={'Full Time'}
                                       text1={'Bangalore Instutute of Technology'} text3={'Aug 2015 - Dec 2020'}/>
-                </FlexWrapper>
+                </AboutWrapper>
 
             </Container>
     <StyledDrawing src={Drawing} alt={'Drawing'}/>
@@ -51,22 +51,47 @@ export  const About = () => {
 
 
 const StyledAbout=styled.section`
-  margin-top: calc(200px - 40px);
+  margin-top: calc(200px - 26px);
   @media ${theme.media.mobile}{
     display: none;
 
   }
 `
+const AboutWrapper=styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  
+
+  @media ${theme.media.desktopDrawing}{
+    margin: 0 auto;
+  }
+  
+`
+
 const StyledTextAbout=styled.h2`
   color: ${theme.colors.fontTitle};
   font-size: 42px;
   font-weight: 700;
   line-height: 52px;
+  padding-bottom: 38px;
+`
+
+const StyledTextExperience=styled(StyledTextAbout)`
+padding: 38px 0;
+`
+const StyledTextEducation=styled(StyledTextExperience)`
+padding: 10px 0 30px;
 `
 
 
 const StyledDrawing=styled.img`
 position: absolute;
   right: 0;
-  top: 727px
+  top: 727px;
+  @media ${theme.media.desktopDrawing}{
+  display: none;
+  
+}
+  
 `
