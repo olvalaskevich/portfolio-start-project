@@ -15,9 +15,10 @@ export const theme={
     },
 
     media:{
-        tablet:"screen and (max-width:900px)",
-        mobile:"screen and (max-width:740px)",
+        tablet:"screen and (max-width:930px)",
+        mobile:"screen and (max-width:800px)",
         desktop: "screen and (min-width: 901px) and (max-width: 1100px)",
-        desktopBig: "screen and (min-width: 1600px)"
+        desktopBig: "screen and (min-width: 1601px)",
+        desktopDrawing: "screen and (min-width: 801px) and (max-width: 1300px)"
     }
 }
