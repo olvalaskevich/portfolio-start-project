@@ -7,6 +7,7 @@ import {Stack} from "./layout/sections/stack/Stack";
 import {Projects} from "./layout/sections/projects/Projects";
 import {Contacts} from "./layout/sections/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
+import React from "react";
 
 
 
