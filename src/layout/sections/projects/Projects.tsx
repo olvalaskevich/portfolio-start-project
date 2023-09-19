@@ -7,49 +7,58 @@ import Picture5 from '../../../accets/images/picture5.webp'
 import Picture6 from '../../../accets/images/picture6.webp'
 import {Project} from "./Project";
 import {Container} from "../../../components/container/Conteiner";
-import styled from "styled-components";
 import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
 import {S} from "../stack/Stack_Styles";
-import {theme} from "../../../styles/Theme";
+import {Sp} from './Projects_Styles'
+
+const projectsData=[
+    {
+        src:Picture1,
+        alt:'pic1'
+    },
+    {
+        src:Picture2,
+        alt:'pic2'
+    },
+    {
+        src:Picture3,
+        alt:'pic3'
+    },
+    {
+        src:Picture4,
+        alt:'pic4'
+    },
+    {
+        src:Picture5,
+        alt:'pic5'
+    },
+    {
+        src:Picture6,
+        alt:'pic6'
+    }
+]
 
 
-
-export const Projects = () => {
+export const Projects:React.FC = () => {
     return (
-        <StyledProjects>
+        <Sp.Projects>
             <Container>
                 <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
                 <S.ThirdTitle>Things I’ve built so far</S.ThirdTitle>
-        <StyledCards>
-                <Project src={Picture1} alt={'pic1'}/>
-                <Project src={Picture2} alt={'pic2'}/>
-                <Project src={Picture3} alt={'pic3'}/>
-                <Project src={Picture4} alt={'pic4'}/>
-                <Project src={Picture5} alt={'pic5'}/>
-                <Project src={Picture6} alt={'pic6'}/>
-        </StyledCards>
+        <Sp.Cards>
+
+            {projectsData.map((s ,index)=>{
+                return <Project src={s.src} key={index}
+                                alt={s.alt}/>
+            })}
+
+        </Sp.Cards>
             </Container>
-        </StyledProjects>
+        </Sp.Projects>
     );
 };
 
-const StyledProjects=styled.section`
-  margin-top: calc(200px - 35px);
-  @media ${theme.media.mobile}{
-    margin-top: 90px;
-  }
-`
-const StyledCards=styled.div`
-  display: flex;
-  row-gap: 60px;
-  column-gap: 30px;
-  padding-top: 110px;
-  flex-wrap: wrap;
-  justify-content: center;
 
-  @media ${theme.media.tablet}{
-    padding-top: 60px;
-`
 
 
 

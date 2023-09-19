@@ -9,7 +9,7 @@ type IconPropsType= {
     viewBox?:string;
 
 }
-export const Icon = (props:IconPropsType) => {
+export const Icon:React.FC<IconPropsType> = (props:IconPropsType) => {
     return (
         <StyledSvg width={props.width || "97"} height={props.height || "59"} viewBox={props.viewBox || "0 0 97 59"} xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${iconSprite}#${props.iconId}`}/>

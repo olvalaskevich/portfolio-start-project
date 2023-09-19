@@ -2,6 +2,9 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 
+// From FC About
+
+
 const About=styled.section`
   margin-top: calc(200px - 26px);
   @media ${theme.media.mobile}{
@@ -45,8 +48,75 @@ position: absolute;
   @media ${theme.media.desktopDrawing}{
   display: none;
   
-}
+} 
+`
+
+
+// From FC Experience
+
+
+const Grid=styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(270px, auto));
+  grid-template-rows: auto;
+  justify-items: start;
+`
+
+const Info=styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
   
+`
+
+const TitleExperience=styled.h1`
+  font-size: 20px;
+  line-height: 31px;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 1px
+`
+
+const Text=styled.span`
+  color: ${theme.colors.fontSmallAbout};
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  }
+`
+const Button=styled.button`
+  background-color: ${theme.colors.buttonSuccess};
+  width: 84px;
+  height: 24px;
+  border-radius: 100px;
+  color: ${theme.colors.buttonText};
+  border: none;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  text-align: center;
+  
+`
+
+const LineAbout=styled.hr`
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid ${theme.colors.fontText};
+  opacity: 0.3;
+  margin-top: 17px;
+  margin-bottom: 30px;
+`
+
+
+// From FC Education
+
+
+const GridEducation=styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(270px, auto));
+  grid-template-rows: auto; 
 `
 
 export const S={
@@ -55,5 +125,12 @@ export const S={
     TextAbout,
     TextExperience,
     TextEducation,
-    Drawing
+    Drawing,
+    Grid,
+    Info,
+    TitleExperience,
+    Text,
+    Button,
+    LineAbout,
+    GridEducation
 }

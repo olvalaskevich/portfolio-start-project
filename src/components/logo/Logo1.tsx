@@ -9,7 +9,7 @@ type LogoPropsType={
 
 
 
-export const Logo1 = (props:LogoPropsType) => {
+export const Logo1:React.FC<LogoPropsType> = (props:LogoPropsType) => {
     if (props.footer===true){
         return (
             <img src={logo2} alt={"logotype"}/>

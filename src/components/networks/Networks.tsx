@@ -8,23 +8,75 @@ type NetworksPropsType={
     footer?:boolean;
 }
 
+const networksFooterData=[
+    {
+        iconId:'githubFooter',
+        width:'30',
+        height:'30',
+        viewBox:'0 0 30 30'
+    },
+    {
+        iconId:'xFooter',
+        width:'32',
+        height:'32',
+        viewBox:'0 0 32 32'
+    },
+    {
+        iconId:'linkedinFooter',
+        width:'30',
+        height:'30',
+        viewBox:'0 0 30 30'
+    }
+
+]
+
+const networksData=[
+    {
+        iconId:'git',
+        width:'30',
+        height:'30',
+        viewBox:'0 0 30 30'
+    },
+    {
+        iconId:'twitter',
+        width:'32',
+        height:'32',
+        viewBox:'0 0 32 32'
+    },
+    {
+        iconId:'linkedin',
+        width:'30',
+        height:'30',
+        viewBox:'0 0 30 30'
+    }
+]
 
 export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) => {
     if (props.footer===true){
         return (
             <S.Network>
-                <Icon iconId={'githubFooter'} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
-                <Icon iconId={'xFooter'} width={'32'} height={'32'} viewBox={'0 0 32 32'}/>
-                <Icon iconId={'linkedinFooter'} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
+
+                {networksFooterData.map((s , index)=>{
+                    return <Icon iconId={s.iconId} key={index}
+                                 width={s.width}
+                                 height={s.height}
+                                 viewBox={s.viewBox}/>
+                })}
+
             </S.Network>
         )
     }
     else {
         return (
             <S.Network>
-                <Icon iconId={'git'} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
-                <Icon iconId={'twitter'} width={'32'} height={'32'} viewBox={'0 0 32 32'}/>
-                <Icon iconId={'linkedin'} width={'30'} height={'30'} viewBox={'0 0 30 30'}/>
+
+                {networksData.map((s , index)=>{
+                    return <Icon iconId={s.iconId} key={index}
+                                 width={s.width}
+                                 height={s.height}
+                                 viewBox={s.viewBox}/>
+                })}
+
             </S.Network>
         )
     }

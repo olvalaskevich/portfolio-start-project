@@ -1,10 +1,10 @@
 import React from 'react';
 import {Icon} from "../../../components/icon/Icon";
-import styled from "styled-components";
 import {StyledText} from "../../../components/titel2styled/Text";
 import {theme} from "../../../styles/Theme";
 import {StyledInfoEducation} from "../../../components/experience/Education";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
+import {Sp} from './Projects_Styles'
 
 
 type ProjectPropsType={
@@ -12,79 +12,85 @@ type ProjectPropsType={
     alt:string;
 }
 
-export const Project = (props:ProjectPropsType) => {
+const textData=[
+    {
+        size:'28px',
+        weight:'500',
+        color:`${theme.colors.fontLinkProject}`,
+        text:'Project Tile goes here'
+    },
+    {
+        size:'18px',
+        weight:'300',
+        color:`${theme.colors.fontLinkProject}`,
+        text:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+    },
+    {
+        size:'16px',
+        weight:'400',
+        color:`${theme.colors.fontTitle}`,
+        text:'Tech stack :'
+    },
+    {
+        size:'14px',
+        weight:'300',
+        color:`${theme.colors.fontTitle}`,
+        text:'HTML , JavaScript, SASS, React'
+    }
+]
+
+const linksData=[
+    {
+        iconId:'link',
+        width:'20px',
+        height:'20px',
+        viewBox:'0 0 20 20',
+        text:'Live Preview'
+    },
+    {
+        iconId:'github',
+        width:'20px',
+        height:'20px',
+        viewBox:'0 0 20 20',
+        text:'View Code'
+    }
+]
+
+export const Project: React.FC<ProjectPropsType> = (props:ProjectPropsType) => {
     return (
-        <StyledCard>
+        <Sp.Card>
             <img src={props.src} alt={'props.alt'}/>
             <FlexWrapper direction={'column'} gap={'15px'} padding={'25px'}>
-                <StyledText size={'28px'} weight={'500'} height={'26px'} color={`${theme.colors.fontLinkProject}`}>
-                    Project Tile goes here
-                </StyledText>
-                <StyledText weight={'300'} size={'18px'} height={'26px'} >This is
-                    sample project description random things are here in description This is sample project lorem
-                    ipsum generator for dummy content
-                </StyledText>
-                <StyledText size={'16px'} weight={'400'} color={`${theme.colors.fontTitle}`}>
-                    Tech stack :
 
-                <StyledText size={'14px'} weight={'300'} color={`${theme.colors.fontTitle}`}>
-                    HTML , JavaScript, SASS, React
-                </StyledText>
-                </StyledText>
+                {textData.map((s , index)=>{
+                    return <StyledText size={s.size} key={index}
+                                       weight={s.weight}
+                                       color={s.color}>
+                        {s.text}
 
-                <StyledGridLinks>
-                    <StyledInfoEducation>
-                        <Icon iconId={'link'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
-                        <a href={'#'}>Live Preview</a>
-                    </StyledInfoEducation>
-                    <StyledInfoEducation>
-                        <Icon iconId={'github'} width={'20px'} height={'20px'} viewBox={'0 0 20 20'}/>
-                        <a href={'#'}>View Code</a>
-                    </StyledInfoEducation>
-                </StyledGridLinks>
+                            </StyledText>
+                })}
+
+                <Sp.GridLinks>
+
+                    {linksData.map((s , index)=>{
+                        return <StyledInfoEducation>
+                            <Icon iconId={s.iconId}
+                                  width={s.width}
+                                  height={s.height}
+                                  viewBox={s.viewBox}/>
+                            <a href={'#'}>{s.text}</a>
+                        </StyledInfoEducation>
+                    })}
+
+                </Sp.GridLinks>
             </FlexWrapper>
-        </StyledCard>
+        </Sp.Card>
     );
 };
 
 
 
 
-const StyledGridLinks=styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: auto;
-  gap: 48px
-`
 
 
-const StyledCard=styled.div`
-  max-width: 375px;
-  width: 100%;
-  height: auto;
-  background-color: ${theme.colors.primaryBg};
-  box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
-  border-radius: 20px;
-  
-  
-  img{
-    width: 100%;
-    height: 260px;
-    border-radius: 20px 20px 0 0;
-
-   
-  }
-  
-  a{
-    text-decoration: underline;
-    color: ${theme.colors.fontLinkProject};
-    font-size: 16px;    
-    font-weight: 400;
-    line-height: 26px;
-  }
-
- 
-`
-
-// calc((100vw - 360px)/(1600 - 360) * (28 - 22) + 22px)
-// calc((100vw - 360px)/(1600 - 360) * (18 - 14) + 14px)
