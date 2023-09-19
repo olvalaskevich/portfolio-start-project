@@ -18,7 +18,7 @@ export const Experience = (props:ExperiencePropsType) => {
 
     return(
         <div>
-            <FlexWrapper justify={'space-between'} align={'center'}>
+            <FlexWrapper justify={'space-between'} align={'flex-start'}>
                 <StyledTitleExperience>{props.text}</StyledTitleExperience>
                 <StyledButton>{props.button}</StyledButton>
             </FlexWrapper>
@@ -38,11 +38,14 @@ export const Experience = (props:ExperiencePropsType) => {
 
 
             </StyledGrid>
+            <StyledLineAbout/>
         </div>
     );
 
 
 };
+
+
 
 export const StyledGrid=styled.div`
   display: grid;
@@ -60,7 +63,7 @@ export const StyledInfo=styled.div`
 
 export const StyledTitleExperience=styled.h1`
   font-size: 20px;
-  line-height: 28px;
+  line-height: 31px;
   color: #666;
   font-weight: 400;
   letter-spacing: 1px
@@ -85,5 +88,13 @@ export const StyledButton=styled.button`
   font-weight: 600;
   line-height: 26px;
   text-align: center;
+  
 `
-
+export const StyledLineAbout=styled.hr`
+  max-width: 700px;
+  width: 100%;
+  border: 1px solid ${theme.colors.fontText};
+  opacity: 0.3;
+  margin-top: 17px;
+  margin-bottom: 30px;
+`

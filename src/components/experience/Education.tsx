@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlexWrapper} from "../flexwrapper/FlexWrapper";
 import {Icon} from "../icon/Icon";
-import {StyledButton, StyledText, StyledTitleExperience} from "./Experience";
+import {StyledButton, StyledLineAbout, StyledText, StyledTitleExperience} from "./Experience";
 import styled from "styled-components";
 
 type EducationPropsType={
@@ -31,6 +31,7 @@ export const ButtonExperience = (props:EducationPropsType) => {
                 </StyledInfoEducation>
 
             </StyledGridEducation>
+            <StyledLineAbout/>
         </div>
     );
 
