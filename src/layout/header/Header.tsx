@@ -1,31 +1,26 @@
 import React from 'react';
-import {Menu} from "../../components/menu/Menu";
-import styled from "styled-components";
+import {Menu} from "./menu/Menu";
 import {Logo1} from "../../components/logo/Logo1";
 import {Container} from "../../components/container/Conteiner";
 import {FlexWrapper} from "../../components/flexwrapper/FlexWrapper";
-import {MenuMobile} from "../../components/mobile/MenuMobile";
+import {MenuMobile} from "./mobile/MenuMobile";
+import {S} from './Header_Styles'
 
 
 
-export const Header = () => {
+export const Header: React.FC = () => {
     return (
-        <StyledHeader>
-            <Container>
+        <S.Header>
+            <Container padding={'0 15px'}>
                 <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Logo1/>
                     <Menu/>
                     <MenuMobile/>
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader=styled.header`
-margin-top: 40px;
-  
-  
-  
-`
+
 

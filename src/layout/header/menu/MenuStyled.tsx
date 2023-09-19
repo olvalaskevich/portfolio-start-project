@@ -1,48 +1,26 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
 import {List} from "./List";
+import {S} from '../Header_Styles'
 
 type MenuPropsType={
     footer?:boolean;
 }
 
 
-export const MenuStyled = (props:MenuPropsType) => {
+export const MenuStyled:React.FC = (props:MenuPropsType) => {
     if (props.footer===true){
     return (
-        <StyledMenuFooter>
+        <S.MenuFooter>
             <List/>
-        </StyledMenuFooter>
+        </S.MenuFooter>
     )
     }
     else {
         return (
-            <StyledMenu>
+            <S.MainMenu>
                 <List/>
-            </StyledMenu>
+            </S.MainMenu>
         )
     }
 };
 
-const StyledMenu=styled.nav`
-  display: flex;
-  
- 
-  @media ${theme.media.tablet}{
-    display: none;
-  }
-
- 
-  
-`
-
-const StyledMenuFooter=styled(StyledMenu)`
-  a {
-    color: ${theme.colors.fontTitle};
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-  }
-
-`
