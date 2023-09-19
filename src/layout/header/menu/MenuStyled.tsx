@@ -7,7 +7,7 @@ type MenuPropsType={
 }
 
 
-export const MenuStyled:React.FC = (props:MenuPropsType) => {
+export const MenuStyled:React.FC<{footer?:boolean}>= (props:MenuPropsType) => {
     if (props.footer===true){
     return (
         <S.MenuFooter>

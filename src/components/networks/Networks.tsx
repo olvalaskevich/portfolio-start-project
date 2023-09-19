@@ -9,7 +9,7 @@ type NetworksPropsType={
 }
 
 
-export const Networks:React.FC = (props:NetworksPropsType) => {
+export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) => {
     if (props.footer===true){
         return (
             <S.Network>

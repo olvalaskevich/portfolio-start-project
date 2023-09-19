@@ -9,7 +9,7 @@ import {Project} from "./Project";
 import {Container} from "../../../components/container/Conteiner";
 import styled from "styled-components";
 import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
-import {StyledThirdTitle} from "../stack/Stack";
+import {S} from "../stack/Stack_Styles";
 import {theme} from "../../../styles/Theme";
 
 
@@ -19,7 +19,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
-                <StyledThirdTitle>Things I’ve built so far</StyledThirdTitle>
+                <S.ThirdTitle>Things I’ve built so far</S.ThirdTitle>
         <StyledCards>
                 <Project src={Picture1} alt={'pic1'}/>
                 <Project src={Picture2} alt={'pic2'}/>

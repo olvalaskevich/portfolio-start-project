@@ -9,7 +9,7 @@ import {Networks} from "../../../components/networks/Networks";
 import {StyledFooterLink} from "../../footer/Footer";
 
 
-export const Contacts = () => {
+export const Contacts:React.FC<{footer?:boolean}>= () => {
     return (
         <StyledContacts>
             <Container padding={'0 15px'}>
