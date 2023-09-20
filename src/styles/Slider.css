@@ -1,0 +1,12 @@
+    .alice-carousel__stage-item:not(.first-child):not(:last-child){
+        margin-right:10px;
+    }
+
+    .alice-carousel__prev-btn,
+    .alice-carousel__next-btn{
+        display: none;
+    }
+
+    .alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active{
+        background-color: #42446E;
+    }
