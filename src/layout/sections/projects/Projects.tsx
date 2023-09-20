@@ -10,6 +10,7 @@ import {Container} from "../../../components/container/Conteiner";
 import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
 import {S} from "../stack/Stack_Styles";
 import {Sp} from './Projects_Styles'
+import {SliderMobile} from "./SliderMobile";
 
 const projectsData=[
     {
@@ -40,19 +41,31 @@ const projectsData=[
 
 
 export const Projects:React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 809;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     return (
         <Sp.Projects>
             <Container>
                 <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
                 <S.ThirdTitle>Things I’ve built so far</S.ThirdTitle>
-        <Sp.Cards>
+                {width<breakpoint ? <SliderMobile/>:
+                    <Sp.Cards>
 
-            {projectsData.map((s ,index)=>{
-                return <Project src={s.src} key={index}
-                                alt={s.alt}/>
-            })}
+                        {projectsData.map((s, index) => {
+                            return <Project src={s.src} key={index}
+                                            alt={s.alt}/>
+                        })}
 
-        </Sp.Cards>
+                    </Sp.Cards>
+
+                }
             </Container>
         </Sp.Projects>
     );
