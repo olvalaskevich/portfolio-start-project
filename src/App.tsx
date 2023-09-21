@@ -1,5 +1,4 @@
 import './App.css';
-
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/sections/main/Main";
 import {About} from "./layout/sections/about/About";
@@ -8,6 +7,8 @@ import {Projects} from "./layout/sections/projects/Projects";
 import {Contacts} from "./layout/sections/contacts/Contacts";
 import {Footer} from "./layout/footer/Footer";
 import React from "react";
+import {Particle} from "./components/particle/Particle";
+
 
 
 
@@ -15,6 +16,7 @@ import React from "react";
 function App() {
     return (
         <div>
+            <Particle/>
             <Header/>
             <Main/>
             <About/>
