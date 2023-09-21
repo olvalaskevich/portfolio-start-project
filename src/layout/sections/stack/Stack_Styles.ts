@@ -2,7 +2,9 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const Stack=styled.section`
-  margin-top: calc(200px - 65px);
+  padding-top: calc(200px - 65px);
+  position: relative;
+  background-color: ${theme.colors.primaryBg};
   @media ${theme.media.mobile}{
     margin-top: 0;
   }

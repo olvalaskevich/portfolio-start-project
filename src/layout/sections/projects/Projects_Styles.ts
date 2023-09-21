@@ -33,7 +33,9 @@ const Card=styled.div`
 `
 
 const Projects=styled.section`
-  margin-top: calc(200px - 35px);
+  padding-top: calc(200px - 35px);
+  position: relative;
+  background-color: ${theme.colors.primaryBg};
   @media ${theme.media.mobile}{
     margin-top: 90px;
   }
@@ -46,7 +48,7 @@ const Cards=styled.div`
   padding-top: 110px;
   flex-wrap: wrap;
   justify-content: center;
-
+  
   @media ${theme.media.tablet}{
     padding-top: 60px;
 `

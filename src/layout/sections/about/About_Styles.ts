@@ -7,6 +7,8 @@ import {theme} from "../../../styles/Theme";
 
 const About=styled.section`
   margin-top: calc(200px - 26px);
+  position: relative;
+  background-color: ${theme.colors.primaryBg};
   @media ${theme.media.mobile}{
     display: none;
 

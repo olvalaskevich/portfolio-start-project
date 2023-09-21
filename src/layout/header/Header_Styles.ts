@@ -6,7 +6,9 @@ import Close from '../../accets/images/close.svg'
 
 
 const Header=styled.header`
-  margin-top: 45px;
+  padding-top: 45px;
+  position: relative;
+  background-color: ${theme.colors.primaryBg};
  
   ${FlexWrapper}{
     @media ${theme.media.tablet}{
@@ -86,6 +88,7 @@ display: none;
 
     background-color: ${theme.colors.secondaryBg};
     opacity: 0.95;
+    z-index: 9999999;
 
 
     ul {
@@ -126,6 +129,7 @@ const BurgerButton=styled.button<{isOpen:boolean}>`
   ${props => props.isOpen && css<{isOpen:boolean}>`
   background-image: url(${Close});
   position: fixed;
+    z-index: 999999999999999;
     
 `}
   

@@ -6,7 +6,8 @@ import {StyledText} from "../../components/titel2styled/Text";
 const Footer=styled.section`
   
   padding-bottom: 60px;
-
+  position: relative;
+  background-color: ${theme.colors.primaryBg};
   @media ${theme.media.tablet}{
     padding-top: 0;
     padding-bottom: 20px;
@@ -44,8 +45,9 @@ const Line=styled.hr`
   grid-area: 2/1/3/5;
   border: 1px solid ${theme.colors.fontText};
   opacity: 0.3;
-  margin-top: 40px;
+  
   margin-bottom: 45px;
+  
 `
 const FooterLink=styled.a`
   font-family: 'DM Sans', sans-serif;
