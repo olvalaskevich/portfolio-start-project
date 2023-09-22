@@ -20,5 +20,9 @@ export const theme={
         desktop: "screen and (min-width: 901px) and (max-width: 1100px)",
         desktopBig: "screen and (min-width: 1601px)",
         desktopDrawing: "screen and (min-width: 801px) and (max-width: 1300px)"
+    },
+
+    animation:{
+        transition:'0.2s ease-in-out'
     }
 }
