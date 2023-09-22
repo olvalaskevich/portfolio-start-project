@@ -1,14 +1,46 @@
 import React from 'react';
 import {S} from '../Header_Styles'
 
+
+const listData=[
+    {
+        item:'Home',
+        href:'home'
+    },
+    {
+        item:'About',
+        href:'about'
+    },
+    {
+        item:'Tech Stack',
+        href:'stack'
+    },
+    {
+        item:'Projects',
+        href:'projects'
+    },
+    {
+        item:'Contact',
+        href:'contact'
+    },
+]
+
 export const List:React.FC = () => {
+
     return (
         <S.List>
-            <li><a href={'#'}>Home</a></li>
-            <li><a href={'#'}>About</a></li>
-            <li><a href={'#'}>Tech Stack</a></li>
-            <li><a href={'#'}>Projects</a></li>
-            <li><a href={'#'}>Contact</a></li>
+            {listData.map((s,index) => {
+                return <li>
+                    <S.LinkMenu key={index}
+                        activeClass="active"
+                        to={s.href}
+                        smooth={true}
+                        spy={true}
+                    >
+                        {s.item}
+                    </S.LinkMenu>
+                        </li>
+            })}
         </S.List>
     );
 };

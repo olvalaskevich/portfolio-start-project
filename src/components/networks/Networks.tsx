@@ -1,6 +1,8 @@
 import React from 'react';
 import {Icon} from "../icon/Icon";
 import {S} from '../../layout/header/Header_Styles'
+import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 
 
@@ -57,10 +59,10 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
 
                 {networksFooterData.map((s , index)=>{
-                    return <Icon iconId={s.iconId} key={index}
+                    return <StyledLinkIcon><Icon iconId={s.iconId} key={index}
                                  width={s.width}
                                  height={s.height}
-                                 viewBox={s.viewBox}/>
+                                 viewBox={s.viewBox}/></StyledLinkIcon>
                 })}
 
             </S.Network>
@@ -71,10 +73,10 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
 
                 {networksData.map((s , index)=>{
-                    return <Icon iconId={s.iconId} key={index}
+                    return <StyledLinkIcon><Icon iconId={s.iconId} key={index}
                                  width={s.width}
                                  height={s.height}
-                                 viewBox={s.viewBox}/>
+                                 viewBox={s.viewBox}/></StyledLinkIcon>
                 })}
 
             </S.Network>
@@ -82,7 +84,17 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
     }
 };
 
+const StyledLinkIcon=styled.a`
+  opacity: 1;
+  transform: translateY(0);
+  transition: ${theme.animation.transition};
 
+  &:hover{
+    opacity: 0.7;
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+`
 
 
 

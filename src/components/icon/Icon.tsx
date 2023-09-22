@@ -1,9 +1,10 @@
 import React from 'react';
 import iconSprite from '../../accets/images/sprite.svg'
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type IconPropsType= {
-    iconId: string;
+    iconId?: string;
     width?: string;
     height?: string;
     viewBox?:string;
@@ -21,4 +22,5 @@ export const Icon:React.FC<IconPropsType> = (props:IconPropsType) => {
 const StyledSvg=styled.svg`
   align-self: center;
   justify-self: center;
+  
 `

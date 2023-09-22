@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
 
 
     return (
-        <S.Header>
+        <S.Header id={'home'}>
             <Container padding={'0 15px'}>
                 <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Logo1/>

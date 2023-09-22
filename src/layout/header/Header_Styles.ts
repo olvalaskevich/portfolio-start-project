@@ -3,12 +3,18 @@ import {theme} from "../../styles/Theme";
 import {FlexWrapper} from "../../components/flexwrapper/FlexWrapper";
 import Burger from '../../accets/images/burger.svg';
 import Close from '../../accets/images/close.svg'
+import {Link} from "react-scroll";
 
 
 const Header=styled.header`
   padding-top: 45px;
-  position: relative;
+  
   background-color: ${theme.colors.primaryBg};
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
  
   ${FlexWrapper}{
     @media ${theme.media.tablet}{
@@ -23,21 +29,25 @@ const List=styled.ul`
   list-style: none;
   display: flex;
   gap: 55px;
+`
 
-  a{
+const LinkMenu=styled(Link)`
+  
     color: ${theme.colors.fontText};
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
-  }
-  a:hover{
-    color: ${theme.colors.primaryBg};
+    cursor: pointer;
+    transition: ${theme.animation.transition};
+  
+  &:hover, &:active{
+    color: ${theme.colors.fontText};
     font-weight: 800;
-    background-color: ${theme.colors.fontLinkProject};
-    border-radius: 10px;
-
+    font-size: 24px;
+    
   }
+  
 `
 
 const MainMenu=styled.nav`
@@ -58,6 +68,9 @@ const MenuFooter=styled(MainMenu)`
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
+  }
+  a:hover{
+    color: ${theme.colors.fontTitle};
   }
 
 `
@@ -153,4 +166,5 @@ export const S={
     MenuWrapper,
     BurgerButton,
     Network,
+    LinkMenu
 }
