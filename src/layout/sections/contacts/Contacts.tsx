@@ -11,7 +11,7 @@ import {S} from './Contacts_Styles'
 
 export const Contacts:React.FC<{footer?:boolean}>= () => {
     return (
-        <S.Contacts>
+        <S.Contacts id={'contact'}>
             <Container padding={'0 15px'}>
             <FlexWrapper direction={'column'} align={'center'}>
                 <StyledTitle2 padding={'38px 0 10px'} size={'calc((100vw - 360px)/(1600 - 360) * (58 - 30) + 30px)'} color={`${theme.colors.fontTitleContact}`} family={'DM Sans'} height={'70px'}>

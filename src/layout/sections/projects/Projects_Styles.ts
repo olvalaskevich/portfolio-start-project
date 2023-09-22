@@ -35,6 +35,7 @@ const Card=styled.div`
 const Projects=styled.section`
   padding-top: calc(200px - 35px);
   position: relative;
+  cursor:default;
   background-color: ${theme.colors.primaryBg};
   @media ${theme.media.mobile}{
     margin-top: 90px;

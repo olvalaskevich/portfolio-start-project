@@ -82,7 +82,7 @@ const stackData=[
 
 export const Stack:React.FC = () => {
     return (
-        <S.Stack>
+        <S.Stack id={'stack'}>
             <Container padding={'0 15px'}>
         <FlexWrapper direction={'column'}>
             <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>

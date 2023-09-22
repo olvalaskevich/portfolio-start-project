@@ -6,6 +6,7 @@ const Contacts=styled.section`
   padding-top: calc(185px - 30px);
   padding-bottom: 40px;
   position: relative;
+  cursor:default;
   background-color: ${theme.colors.primaryBg};
   @media ${theme.media.tablet}{
     padding-top: 60px;

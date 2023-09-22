@@ -45,14 +45,16 @@ const linksData=[
         width:'20px',
         height:'20px',
         viewBox:'0 0 20 20',
-        text:'Live Preview'
+        text:'Live Preview',
+        stroke:'black'
     },
     {
         iconId:'github',
         width:'20px',
         height:'20px',
         viewBox:'0 0 20 20',
-        text:'View Code'
+        text:'View Code',
+        stroke:'black'
     }
 ]
 
@@ -75,7 +77,7 @@ export const Project: React.FC<ProjectPropsType> = (props:ProjectPropsType) => {
 
                     {linksData.map((s , index)=>{
                         return <StyledInfoEducation>
-                            <Icon iconId={s.iconId}
+                            <Icon iconId={s.iconId} key={index}
                                   width={s.width}
                                   height={s.height}
                                   viewBox={s.viewBox}/>

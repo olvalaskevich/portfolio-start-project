@@ -9,6 +9,7 @@ const About=styled.section`
   margin-top: calc(200px - 26px);
   position: relative;
   background-color: ${theme.colors.primaryBg};
+  cursor:default;
   @media ${theme.media.mobile}{
     display: none;
 

@@ -14,7 +14,6 @@ export const Container=styled.div<ContainerPropsType> `
   margin: 0 auto;
   padding: ${props => props.padding||0};
   
-
   @media ${theme.media.tablet}{
     padding: 15px;
     

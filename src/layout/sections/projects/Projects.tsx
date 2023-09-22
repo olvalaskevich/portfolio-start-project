@@ -51,7 +51,7 @@ export const Projects:React.FC = () => {
     }, []);
 
     return (
-        <Sp.Projects>
+        <Sp.Projects id={'projects'}>
             <Container>
                 <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>Projects</StyledTitle2>
                 <S.ThirdTitle>Things I’ve built so far</S.ThirdTitle>

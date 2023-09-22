@@ -33,6 +33,7 @@ const  Border=styled.div`
   flex-shrink: 0;
   margin-top: 20px;
   
+  
   @media ${theme.media.mobile}{
     width: 300px;
     height: 300px;

@@ -4,7 +4,7 @@ import {createGlobalStyle} from "styled-components";
 export const GlobalStyled=createGlobalStyle`
   *,
   *::before,
-  *::after{
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,10 +17,10 @@ export const GlobalStyled=createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 

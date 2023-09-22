@@ -4,6 +4,7 @@ import {theme} from "../../../styles/Theme";
 const Stack=styled.section`
   padding-top: calc(200px - 65px);
   position: relative;
+  cursor:default;
   background-color: ${theme.colors.primaryBg};
   @media ${theme.media.mobile}{
     margin-top: 0;

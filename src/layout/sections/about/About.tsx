@@ -37,7 +37,7 @@ const aboutData=[
 
 export  const About:React.FC = () => {
     return (
-        <S.About>
+        <S.About id={'about'}>
             <Container padding={'0 15px'}>
 
                 <S.AboutWrapper>
