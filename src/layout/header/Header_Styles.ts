@@ -85,47 +85,51 @@ display: none;
 `
 
 const MenuMobile=styled.div<{isOpen:boolean}>`
-display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-350%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: ${theme.colors.secondaryBg};
+  opacity: 0.95;
+  z-index: 9999999;
+  
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+  a {
+    display: inline-block;
+    font-size: 30px;
+    padding: 20px;
+
+  }
+
+  a:hover {
+    color: ${theme.colors.primaryBg};
+    font-weight: 800;
+    background-color: ${theme.colors.fontLinkProject};
+    border-radius: 10px;
+  }
+  transition: 1.2s ease-in-out;
+  
   
   ${props => props.isOpen && css<{isOpen:boolean}> `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
+    transform: translateY(0);
     
-
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: ${theme.colors.secondaryBg};
-    opacity: 0.95;
-    z-index: 9999999;
-
-
-    ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
+    & ul{
       gap: 20px;
-
     }
-
-    a {
-      display: inline-block;
-      font-size: 30px;
-      padding: 20px;
-
-    }
-
-    a:hover {
-      color: ${theme.colors.primaryBg};
-      font-weight: 800;
-      background-color: ${theme.colors.fontLinkProject};
-      border-radius: 10px;
-    }
-
   `}
 `
 
@@ -148,7 +152,7 @@ const BurgerButton=styled.button<{isOpen:boolean}>`
   
 `
 const Network=styled.div`
-display: flex;
+  display: flex;
   align-items: center;
   gap: 20px;
   justify-self: right;
