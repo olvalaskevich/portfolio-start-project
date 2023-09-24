@@ -4,7 +4,8 @@ import {Experience} from "../../../components/experience/Experience";
 import {ButtonExperience} from "../../../components/experience/Education";
 import {StyledText} from "../../../components/titel2styled/Text";
 import {Container} from "../../../components/container/Conteiner";
-import {S} from './About_Styles'
+import {S} from './About_Styles';
+import {Fade} from "react-awesome-reveal";
 
 
 const aboutData=[
@@ -41,6 +42,7 @@ export  const About:React.FC = () => {
             <Container padding={'0 15px'}>
 
                 <S.AboutWrapper>
+                    <Fade>
                     <S.TextAbout>
                         About Me
                     </S.TextAbout>
@@ -65,6 +67,8 @@ export  const About:React.FC = () => {
                     <S.TextEducation>Education</S.TextEducation>
                     <ButtonExperience text={'Bachelor in Electronics & Communication'} button={'Full Time'}
                                       text1={'Bangalore Instutute of Technology'} text3={'Aug 2015 - Dec 2020'}/>
+
+                        </Fade>
                 </S.AboutWrapper>
 
             </Container>

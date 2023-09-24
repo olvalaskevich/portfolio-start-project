@@ -59,7 +59,7 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
 
                 {networksFooterData.map((s , index)=>{
-                    return <StyledLinkIcon><Icon iconId={s.iconId} key={index}
+                    return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
                                  width={s.width}
                                  height={s.height}
                                  viewBox={s.viewBox}/></StyledLinkIcon>
@@ -73,7 +73,7 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
 
                 {networksData.map((s , index)=>{
-                    return <StyledLinkIcon><Icon iconId={s.iconId} key={index}
+                    return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
                                  width={s.width}
                                  height={s.height}
                                  viewBox={s.viewBox}/></StyledLinkIcon>

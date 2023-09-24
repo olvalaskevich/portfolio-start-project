@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 import {Container} from "../../../components/container/Conteiner";
 import {StyledTitle2} from "../../../components/titel2styled/Title2.styled";
 import {S} from './Stack_Styles'
+import {Zoom} from "react-awesome-reveal";
 
 const stackData=[
     {
@@ -85,18 +86,24 @@ export const Stack:React.FC = () => {
         <S.Stack id={'stack'}>
             <Container padding={'0 15px'}>
         <FlexWrapper direction={'column'}>
-            <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'} align={'center'}>My Tech Stack</StyledTitle2>
-            <S.ThirdTitle>Technologies I’ve been working with recently</S.ThirdTitle>
+
+            <Zoom cascade={true} triggerOnce={true}>
+                <StyledTitle2 size={'calc((100vw - 360px)/(1600 - 360) * (48 - 30) + 30px)'} height={'26px'}
+                              align={'center'}>My Tech Stack</StyledTitle2>
+                <S.ThirdTitle>Technologies I’ve been working with recently</S.ThirdTitle>
+
+
             <S.GridStack>
 
-                {stackData.map((s , index)=>{
-                    return <Icon iconId={s.iconId} key={index}
-                                 width={s.width}
-                                 height={s.height}
-                                 viewBox={s.viewBox}/>
-                } )}
+                    {stackData.map((s, index) => {
+                        return <Icon iconId={s.iconId} key={index}
+                                     width={s.width}
+                                     height={s.height}
+                                     viewBox={s.viewBox}/>
+                    })}
 
             </S.GridStack>
+            </Zoom>
         </FlexWrapper>
             </Container>
         </S.Stack>

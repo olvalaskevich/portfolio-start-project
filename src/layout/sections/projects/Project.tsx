@@ -5,6 +5,8 @@ import {theme} from "../../../styles/Theme";
 import {StyledInfoEducation} from "../../../components/experience/Education";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 import {Sp} from './Projects_Styles'
+import styled from "styled-components";
+import {Fade} from "react-awesome-reveal";
 
 
 type ProjectPropsType={
@@ -60,6 +62,7 @@ const linksData=[
 
 export const Project: React.FC<ProjectPropsType> = (props:ProjectPropsType) => {
     return (
+
         <Sp.Card>
             <img src={props.src} alt={'props.alt'}/>
             <FlexWrapper direction={'column'} gap={'15px'} padding={'25px'}>
@@ -76,22 +79,31 @@ export const Project: React.FC<ProjectPropsType> = (props:ProjectPropsType) => {
                 <Sp.GridLinks>
 
                     {linksData.map((s , index)=>{
-                        return <StyledInfoEducation>
-                            <Icon iconId={s.iconId} key={index}
+                        return <StyledInfoEducation key={index}>
+                            <Icon iconId={s.iconId}
                                   width={s.width}
                                   height={s.height}
                                   viewBox={s.viewBox}/>
-                            <a href={'#'}>{s.text}</a>
+                            <LinkProject href={'#'}>{s.text}</LinkProject>
                         </StyledInfoEducation>
                     })}
 
                 </Sp.GridLinks>
             </FlexWrapper>
         </Sp.Card>
+
     );
 };
 
-
+const LinkProject=styled.a`
+  transition: ${theme.animation.transition};
+  &:hover{
+    opacity: 0.4;
+    border: none;
+    text-decoration: none;
+    font-size: 17px;
+  }
+`
 
 
 

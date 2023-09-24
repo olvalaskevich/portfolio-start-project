@@ -22,14 +22,14 @@ const items = [
     <Project src={Picture6} alt={'pic6'}/>
 ];
 export const SliderMobile:React.FC = () => (
-<Container>
-    <AliceCarousel
-        mouseTracking
-        items={items}
-        autoWidth
-        autoHeight
-    />
-</Container>
+    <Container padding={'60px 0 0 0'}>
+        <AliceCarousel
+            mouseTracking
+            items={items}
+            autoWidth
+            autoHeight
+        />
+    </Container>
 );
 
 

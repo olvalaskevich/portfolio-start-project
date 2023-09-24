@@ -57,7 +57,7 @@ const String=styled.span`
 const Main=styled.section`
   margin-top: 220px;
   @media ${theme.media.mobile}{
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 20px;
   }
   
