@@ -56,7 +56,7 @@ const FooterLink=styled.a`
   font-weight: 400;
   line-height: 26px;
   color: ${theme.colors.fontTitle};
-  flex-grow:0.2;
+  flex-grow:0.15;
   align-self: center;
 `
 const TextGradient=styled(StyledText)`
