@@ -30,8 +30,8 @@ export const List:React.FC = () => {
     return (
         <S.List>
             {listData.map((s,index) => {
-                return <li>
-                    <S.LinkMenu key={index}
+                return <li key={index}>
+                    <S.LinkMenu
                         activeClass="active"
                         to={s.href}
                         smooth={true}
