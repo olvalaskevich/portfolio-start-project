@@ -6,7 +6,9 @@ const GridLinks=styled.div`
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: auto;
-  gap: 48px
+  gap: 48px;
+  
+
 `
 
 const Card=styled.div`
@@ -21,6 +23,7 @@ const Card=styled.div`
     width: 100%;
     height: 260px;
     border-radius: 20px 20px 0 0;
+    object-fit: cover;
   }
   
   a{
@@ -37,9 +40,7 @@ const Projects=styled.section`
   position: relative;
   cursor:default;
   background-color: ${theme.colors.primaryBg};
-  @media ${theme.media.mobile}{
-    margin-top: 90px;
-  }
+  padding-bottom: 155px;
 `
 
 const Cards=styled.div`
