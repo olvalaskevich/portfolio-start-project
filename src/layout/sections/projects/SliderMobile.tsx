@@ -10,6 +10,7 @@ import Picture5 from '../../../accets/images/picture5.webp';
 import Picture6 from '../../../accets/images/picture6.webp';
 import '../../../styles/Slider.css';
 import {Container} from "../../../components/container/Conteiner";
+import {Fade} from "react-awesome-reveal";
 
 
 
@@ -23,12 +24,14 @@ const items = [
 ];
 export const SliderMobile:React.FC = () => (
     <Container padding={'60px 0 0 0'}>
+        <Fade>
         <AliceCarousel
             mouseTracking
             items={items}
             autoWidth
             autoHeight
         />
+        </Fade>
     </Container>
 );
 

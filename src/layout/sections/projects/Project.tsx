@@ -6,7 +6,7 @@ import {StyledInfoEducation} from "../../../components/experience/Education";
 import {FlexWrapper} from "../../../components/flexwrapper/FlexWrapper";
 import {Sp} from './Projects_Styles'
 import styled from "styled-components";
-import {Fade} from "react-awesome-reveal";
+
 
 
 type ProjectPropsType={

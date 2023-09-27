@@ -3,15 +3,12 @@ import {theme} from "../../../styles/Theme";
 
 
 const Contacts=styled.section`
-  padding-top: calc(185px - 30px);
+ 
   padding-bottom: 40px;
   position: relative;
   cursor:default;
   background-color: ${theme.colors.primaryBg};
-  @media ${theme.media.tablet}{
-    padding-top: 60px;
-  
-  }
+ 
 `
 
 const ContactsAdaptive=styled.div`
@@ -20,6 +17,7 @@ const ContactsAdaptive=styled.div`
   justify-content: space-between;
   width: 100%;
   padding-top: 215px;
+  
    
   
   @media ${theme.media.tablet}{
@@ -31,7 +29,7 @@ const ContactsAdaptive=styled.div`
 `
 
 const LogoAdaptive=styled.div`
-  display: flex;
+  //display: flex;
   flex-grow:1;
   @media ${theme.media.tablet}{
     display: none;
@@ -47,6 +45,13 @@ const Link=styled.a`
   background-image: linear-gradient(to right, ${theme.colors.gradientEnd}, ${theme.colors.gradientMain});
   color: transparent;
   -webkit-background-clip: text;
+  transition: ${theme.animation.transitionLonger};
+  opacity: 1;
+  
+  &:hover{
+    transform: scale(110%);
+    opacity: 0.8;
+  }
 
   @media ${theme.media.desktopBig}{
     font-size: 58px;

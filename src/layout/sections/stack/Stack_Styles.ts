@@ -35,10 +35,12 @@ const ThirdTitle=styled.h3`
   line-height: 26px;
   text-align: center;
   padding-top: 10px;
-
+ 
   @media ${theme.media.desktopBig}{
     font-size: 32px;
   }
+  
+  
 `
 export const S={
     Stack,

@@ -35,9 +35,11 @@ const TextGridFooter=styled(StyledText)`
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
+  
   @media ${theme.media.desktop}{
     padding-top: 50px;   
   }
+ 
 `
 
 const Line=styled.hr`
