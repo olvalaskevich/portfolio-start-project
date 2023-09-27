@@ -47,7 +47,8 @@ padding: 10px 0 30px;
 const Drawing=styled.img`
 position: absolute;
   right: 0;
-  top: 727px;
+  top: -140px;
+  z-index: 999;
   @media ${theme.media.desktopDrawing}{
   display: none;
   
