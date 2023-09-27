@@ -9,7 +9,7 @@ export const MenuMobile:React.FC = () => {
     return (
         <S.MenuWrapper>
             <S.MenuMobile isOpen={menuIsOpen} onClick={()=>{setMenuIsOpen(false)}}>
-                <List/>
+                <List mobile={true}/>
             </S.MenuMobile>
             <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}></S.BurgerButton>
         </S.MenuWrapper>
