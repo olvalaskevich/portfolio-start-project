@@ -29,6 +29,8 @@ const List=styled.ul`
   list-style: none;
   display: flex;
   gap: 55px;
+
+ 
 `
 
 const LinkMenu=styled(Link)`
@@ -45,9 +47,10 @@ const LinkMenu=styled(Link)`
     color: ${theme.colors.fontText};
     font-weight: 800;
     font-size: 24px;
-    
   }
-  
+`
+const LinkItem=styled.li`
+
 `
 
 const MainMenu=styled.nav`
@@ -170,5 +173,6 @@ export const S={
     MenuWrapper,
     BurgerButton,
     Network,
-    LinkMenu
+    LinkMenu,
+    LinkItem
 }
