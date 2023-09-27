@@ -12,12 +12,13 @@ export const Footer:React.FC<{footer?:boolean}>= () => {
     return (
         <Sf.Footer>
             <Container padding={'0 15px'}>
-                <Slide>
+                <Slide triggerOnce={true}>
             <Sf.Line/>
                 </Slide>
         <Sf.FlexFooter>
-            <Fade delay={1500}>
-                    <MenuStyled footer/>
+            <Fade triggerOnce={true}>
+                <MenuStyled footer/>
+            </Fade>
             <Sf.TextGridFooter>Designed and built by
                 <Sf.TextGradient> Pavan MG </Sf.TextGradient>
                 with
@@ -25,7 +26,7 @@ export const Footer:React.FC<{footer?:boolean}>= () => {
                 &
                 <Sf.TextGradient> Coffee</Sf.TextGradient>
             </Sf.TextGridFooter>
-            </Fade>
+
         </Sf.FlexFooter>
 
 

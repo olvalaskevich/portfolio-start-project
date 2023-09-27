@@ -3,6 +3,7 @@ import {Icon} from "../icon/Icon";
 import {S} from '../../layout/header/Header_Styles'
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {Fade} from "react-awesome-reveal";
 
 
 
@@ -57,14 +58,14 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
     if (props.footer===true){
         return (
             <S.Network>
-
-                {networksFooterData.map((s , index)=>{
-                    return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
-                                 width={s.width}
-                                 height={s.height}
-                                 viewBox={s.viewBox}/></StyledLinkIcon>
-                })}
-
+                <Fade triggerOnce={true}>
+                    {networksFooterData.map((s, index) => {
+                        return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
+                                                                 width={s.width}
+                                                                 height={s.height}
+                                                                 viewBox={s.viewBox}/></StyledLinkIcon>
+                    })}
+                </Fade>
             </S.Network>
         )
     }
