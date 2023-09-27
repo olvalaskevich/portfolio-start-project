@@ -11,7 +11,7 @@ import {S} from './Header_Styles'
 export const Header: React.FC = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 930;
+    const breakpoint = 931;
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
 
 
     return (
-        <S.Header id={'home'}>
+        <S.Header>
             <Container padding={'0 15px'}>
                 <FlexWrapper justify={'space-between'} align={'flex-start'}>
                     <Logo1/>
