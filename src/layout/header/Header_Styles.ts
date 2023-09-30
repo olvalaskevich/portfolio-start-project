@@ -43,7 +43,7 @@ const LinkMenu=styled(Link)`
     cursor: pointer;
     transition: ${theme.animation.transition};
   
-  &:hover, &:active{
+  &:hover, &.active{
     color: ${theme.colors.fontText};
     font-weight: 800;
     font-size: 24px;
@@ -66,15 +66,19 @@ const MainMenu=styled.nav`
 `
 
 const MenuFooter=styled(MainMenu)`
-  a {
+  ${LinkMenu} {
     color: ${theme.colors.fontTitle};
     font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     font-size: 18px;
+    transition: ${theme.animation.transition};
+    &:hover, &.active{
+      color: ${theme.colors.fontTitle};
+      font-weight: 800;
+      font-size: 24px;
+    }
   }
-  a:hover{
-    color: ${theme.colors.fontTitle};
-  }
+  
 
 `
 
@@ -109,21 +113,31 @@ const MenuMobile=styled.div<{isOpen:boolean}>`
     flex-direction: column;
     gap: 10px;
 
-  }
+  };
 
-  a {
+  ${LinkMenu} {
     display: inline-block;
     font-size: 30px;
     padding: 20px;
+    
+    &:hover{
+      color: ${theme.colors.primaryBg};
+      font-weight: 800;
+      background-color: ${theme.colors.fontLinkProject};
+      border-radius: 10px;
+    }
+    
+    &.active{
+      color: ${theme.colors.primaryBg};
+      font-weight: 800;
+      background-color: ${theme.colors.fontLinkProject};
+      border-radius: 10px;
+    }
 
-  }
+  };
 
-  a:hover {
-    color: ${theme.colors.primaryBg};
-    font-weight: 800;
-    background-color: ${theme.colors.fontLinkProject};
-    border-radius: 10px;
-  }
+   
+  
   transition: 1.2s ease-in-out;
   
   
