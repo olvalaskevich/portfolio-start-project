@@ -7,7 +7,7 @@ const Contacts=styled.section`
   padding-bottom: 40px;
   position: relative;
   cursor:default;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
  
 `
 

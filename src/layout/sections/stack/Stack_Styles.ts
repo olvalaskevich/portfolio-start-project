@@ -2,10 +2,10 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const Stack=styled.section`
-  padding-top: calc(200px - 65px);
+  padding-top: calc(200px - 100px);
   position: relative;
   cursor:default;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
   @media ${theme.media.mobile}{
     margin-top: 0;
   }

@@ -8,7 +8,7 @@ const Footer=styled.section`
   padding-bottom: 60px;
   position: relative;
   cursor:default;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
   @media ${theme.media.tablet}{
     padding-top: 0;
     padding-bottom: 20px;

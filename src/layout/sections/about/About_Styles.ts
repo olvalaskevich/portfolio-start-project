@@ -6,9 +6,9 @@ import {theme} from "../../../styles/Theme";
 
 
 const About=styled.section`
-  margin-top: calc(200px - 26px);
+  margin-top: calc(200px - 110px);
   position: relative;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
   cursor:default;
   @media ${theme.media.mobile}{
     display: none;
@@ -20,7 +20,7 @@ const AboutWrapper=styled.div`
   display: flex;
   flex-direction: column;
   width: 700px;
-  
+ 
 
   @media ${theme.media.desktopDrawing}{
     margin: 0 auto;
@@ -29,6 +29,7 @@ const AboutWrapper=styled.div`
 `
 
 const TextAbout=styled.h2`
+  margin-top: 40px;
   color: ${theme.colors.fontTitle};
   font-size: 42px;
   font-weight: 700;
@@ -84,7 +85,7 @@ const TitleExperience=styled.h1`
 const Text=styled.span`
   color: ${theme.colors.fontSmallAbout};
   font-size: 12px;
-  line-height: 28px;
+  //line-height: 28px;
   font-weight: 500;
   letter-spacing: 1px;
   }

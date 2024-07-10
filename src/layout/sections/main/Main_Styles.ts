@@ -5,7 +5,7 @@ import {theme} from "../../../styles/Theme";
 const MainWrapper=styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end;  
       
   @media ${theme.media.mobile}{
     flex-wrap: wrap-reverse;
@@ -19,7 +19,6 @@ const Photo=styled.img`
   height: calc(100% - 17px);
   border-radius: 50%;
   object-fit: cover;
-  
 `
 
 const  Border=styled.div`
@@ -65,7 +64,7 @@ const Main=styled.section`
 
 const TextBlock=styled.div`
   width: 635px;
-  height: 300px;
+  height: auto;
   color: ${theme.colors.fontTitle};
   font-family: 'Poppins', sans-serif;
   font-size: calc((100vw - 360px)/(1600 - 360) * (58 - 30) + 30px);

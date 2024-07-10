@@ -36,10 +36,10 @@ const Card=styled.div`
 `
 
 const Projects=styled.section`
-  padding-top: calc(200px - 35px);
+  padding-top: calc(200px - 100px);
   position: relative;
   cursor:default;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
   padding-bottom: 155px;
 `
 
