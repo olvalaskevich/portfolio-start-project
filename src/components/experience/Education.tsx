@@ -18,7 +18,7 @@ export const ButtonExperience:React.FC<EducationPropsType> = (props:EducationPro
         <div>
             <FlexWrapper justify={'space-between'} align={'center'}>
                 <S.TitleExperience>{props.text}</S.TitleExperience>
-                <S.Button>{props.button}</S.Button>
+
             </FlexWrapper>
             <S.GridEducation>
 
