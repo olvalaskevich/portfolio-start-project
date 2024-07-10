@@ -46,29 +46,29 @@ export  const About:React.FC = () => {
                     <S.TextAbout>
                         About Me
                     </S.TextAbout>
-                    <StyledText size={'18px'}>The Generator App is an online tool that helps you to export ready-made templates ready
-                        to work as your
-                        future website. It helps you to combine slides, panels and other components and export it as a
-                        set of
-                        static files: HTML/CSS/JS.
+                    <StyledText size={'18px'}>
+                        Frontend is a part of my life. I like to draw parallels and find analogies between different concepts in development.
+                        I work hard to improve my skills, strive for professional growth and I'm ready to study and take an active part in team
+                        projects to achieve a common goal.
                     </StyledText>
-                    <S.TextExperience>
-                        Work Experience
-                    </S.TextExperience>
+                    {/*<S.TextExperience>*/}
+                    {/*    Work Experience*/}
+                    {/*</S.TextExperience>*/}
 
-                    {aboutData.map((s , index)=>{
-                        return <Experience text={s.text} key={index}
-                                           button={s.button}
-                                           text1={s.text1}
-                                           text2={s.text2}
-                                           text3={s.text3}/>
-                    })}
+                    {/*{aboutData.map((s , index)=>{*/}
+                    {/*    return <Experience text={s.text} key={index}*/}
+                    {/*                       button={s.button}*/}
+                    {/*                       text1={s.text1}*/}
+                    {/*                       text2={s.text2}*/}
+                    {/*                       text3={s.text3}/>*/}
+                    {/*})}*/}
 
                     <S.TextEducation>Education</S.TextEducation>
-                    <ButtonExperience text={'Bachelor in Electronics & Communication'} button={'Full Time'}
-                                      text1={'Bangalore Instutute of Technology'} text3={'Aug 2015 - Dec 2020'}/>
-
-                        </Fade>
+                    <ButtonExperience text={'Engineer of Telecommunications'}
+                                      text1={'Belarusian State University of Informatics and Radioelectronics'} text3={'Aug 2011 - Jun 2015'}/>
+                    <ButtonExperience text={'Junior Frontend Developer'}
+                                          text1={'IT-INCUBATOR ♥'} text3={'Aug 2023'}/>
+                    </Fade>
                 </S.AboutWrapper>
 
             </Container>
