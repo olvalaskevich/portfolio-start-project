@@ -4,7 +4,7 @@ import {theme} from "../../../styles/Theme";
 
 const Contacts=styled.section`
  
-  padding-bottom: 40px;
+
   position: relative;
   cursor:default;
   background-color: ${theme.colors.secondaryBg};
@@ -16,7 +16,7 @@ const ContactsAdaptive=styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding-top: 215px;
+  padding-top: 100px;
   
    
   

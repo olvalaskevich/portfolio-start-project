@@ -14,7 +14,7 @@ const GridLinks=styled.div`
 const Card=styled.div`
   max-width: 375px;
   width: 100%;
-  height: auto;
+  height: 40em;
   background-color: ${theme.colors.primaryBg};
   box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.20);
   border-radius: 20px; 
@@ -40,7 +40,7 @@ const Projects=styled.section`
   position: relative;
   cursor:default;
   background-color: ${theme.colors.secondaryBg};
-  padding-bottom: 155px;
+  padding-bottom: 100px;
 `
 
 const Cards=styled.div`
