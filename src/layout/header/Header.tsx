@@ -23,8 +23,8 @@ export const Header: React.FC = () => {
     return (
         <S.Header>
             <Container padding={'0 15px'}>
-                <FlexWrapper justify={'space-between'} align={'flex-start'}>
-                    <Logo1/>
+                <FlexWrapper justify={'space-around'} align={'flex-start'}>
+                    {/*<Logo1/>*/}
 
                     {width<breakpoint ? <MenuMobile/>
                                       : <Menu/>}
