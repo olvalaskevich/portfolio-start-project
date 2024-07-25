@@ -19,19 +19,11 @@ export const Footer:React.FC<{footer?:boolean}>= () => {
             <Fade triggerOnce={true}>
                 <MenuStyled footer/>
             </Fade>
-            <Sf.TextGridFooter>Designed and built by
-                <Sf.TextGradient> Pavan MG </Sf.TextGradient>
-                with
-                <Sf.TextGradient> Love </Sf.TextGradient>
-                &
-                <Sf.TextGradient> Coffee</Sf.TextGradient>
+            <Sf.TextGridFooter>Designed and build by
+                <Sf.TextGradient> Olya Valaskevich </Sf.TextGradient>
             </Sf.TextGridFooter>
-
         </Sf.FlexFooter>
-
-
             </Container>
-
         </Sf.Footer>
     );
 };
