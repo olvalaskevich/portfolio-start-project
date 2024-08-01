@@ -16,19 +16,22 @@ const networksFooterData=[
         iconId:'githubFooter',
         width:'30',
         height:'30',
-        viewBox:'0 0 30 30'
+        viewBox:'0 0 30 30',
+        href: 'https://github.com/olvalaskevich'
     },
     {
         iconId:'xFooter',
-        width:'32',
-        height:'32',
-        viewBox:'0 0 32 32'
+        width:'35',
+        height:'35',
+        viewBox:'0 0 25 25',
+        href:'https://www.instagram.com/this.olyadev'
     },
     {
         iconId:'linkedinFooter',
         width:'30',
         height:'30',
-        viewBox:'0 0 30 30'
+        viewBox:'0 0 30 30',
+        href: 'https://www.linkedin.com/feed'
     }
 
 ]
@@ -38,19 +41,22 @@ const networksData=[
         iconId:'git',
         width:'30',
         height:'30',
-        viewBox:'0 0 30 30'
+        viewBox:'0 0 30 30',
+        href: 'https://github.com/olvalaskevich'
     },
     {
-        iconId:'twitter',
-        width:'32',
-        height:'32',
-        viewBox:'0 0 32 32'
+        iconId:'instagram',
+        width:'35',
+        height:'35',
+        viewBox:'0 0 25 25',
+        href: 'https://www.instagram.com/this.olyadev'
     },
     {
         iconId:'linkedin',
         width:'30',
         height:'30',
-        viewBox:'0 0 30 30'
+        viewBox:'0 0 30 30',
+        href: 'https://www.linkedin.com/in/volha-valaskevich-41a5b4288'
     }
 ]
 
@@ -60,7 +66,7 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
                 <Fade triggerOnce={true}>
                     {networksFooterData.map((s, index) => {
-                        return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
+                        return <StyledLinkIcon href={s.href} target={'blank'} key={index}><Icon iconId={s.iconId}
                                                                  width={s.width}
                                                                  height={s.height}
                                                                  viewBox={s.viewBox}/></StyledLinkIcon>
@@ -74,7 +80,7 @@ export const Networks:React.FC<{footer?:boolean}> = (props:NetworksPropsType) =>
             <S.Network>
 
                 {networksData.map((s , index)=>{
-                    return <StyledLinkIcon key={index}><Icon iconId={s.iconId}
+                    return <StyledLinkIcon href={s.href} target={'blank'} key={index}><Icon iconId={s.iconId}
                                  width={s.width}
                                  height={s.height}
                                  viewBox={s.viewBox}/></StyledLinkIcon>
