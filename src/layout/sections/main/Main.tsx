@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../../../accets/images/photo.jpg'
+import photo from '../../../accets/images/myPhoto.png'
 import {Container} from "../../../components/container/Conteiner";
 import {S} from './Main_Styles';
 import Tilt from 'react-parallax-tilt';
@@ -21,14 +21,14 @@ export const Main:React.FC = () => {
                 <S.GradientText>
                     <Typewriter
                         options={{
-                            strings: ['Pavan MG'],
+                            strings: ['Olya Valaskevich'],
                             autoStart: true,
                             loop: true,
                         }}
                     />
                 </S.GradientText>
                 <Fade delay={900}>
-                    <S.String>I build things for web</S.String>
+                    <S.String>I'm Junior Frontend Developer</S.String>
                 </Fade>
             </S.TextBlock>
             <Rotate>
