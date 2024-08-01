@@ -12,6 +12,7 @@ import styled from "styled-components";
 type ProjectPropsType={
     src:string;
     alt:string;
+    number:number
 }
 
 const textData=[
@@ -19,13 +20,17 @@ const textData=[
         size:'28px',
         weight:'500',
         color:`${theme.colors.fontLinkProject}`,
-        text:'Project Tile goes here'
+        text:['Portfolio project', 'To-do list project', 'Social network project']
     },
     {
         size:'18px',
         weight:'300',
         color:`${theme.colors.fontLinkProject}`,
-        text:'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content'
+        text:[
+            'This is a portfolio project where companies can view information about me, get acquainted with the technologies I own and view pet projects.',
+            'This is a to-do list, which is the main educational project. With its help, users can make to-do lists for every day and not worry about forgetting to do something, everything will be saved by a to-do list!',
+            'The social network project implements sections for getting a list of users and their profile.'
+        ]
     },
     {
         size:'16px',
@@ -37,7 +42,7 @@ const textData=[
         size:'14px',
         weight:'300',
         color:`${theme.colors.fontTitle}`,
-        text:'HTML , JavaScript, SASS, React'
+        text:'HTML , JavaScript, SASS, React, SC'
     }
 ]
 
@@ -71,7 +76,7 @@ export const Project: React.FC<ProjectPropsType> = (props:ProjectPropsType) => {
                     return <StyledText size={s.size} key={index}
                                        weight={s.weight}
                                        color={s.color}>
-                        {s.text}
+                        {Array.isArray(s.text)?s.text[props.number]:s.text}
 
                             </StyledText>
                 })}
