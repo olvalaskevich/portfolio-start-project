@@ -8,7 +8,6 @@ import {Link} from "react-scroll";
 
 const Header=styled.header`
   padding-top: 45px;
-  
   background-color: ${theme.colors.secondaryBg};
   position: fixed;
   top: 0;
